@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Limited access on Interest Tags and Tag Categories.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Fundraising_User_Standard</label>
+    <mutingPermissionSets>Fundraising_User_Standard_Muted</mutingPermissionSets>
+    <permissionSets>FundraisingAccessStandard</permissionSets>
+    <permissionSets>Interaction_Summary_Standard</permissionSets>
+    <permissionSets>force__ActionPlans</permissionSets>
+    <permissionSets>force__ActionableSegmentation</permissionSets>
+    <permissionSets>force__AnalyticsQueryService</permissionSets>
+    <permissionSets>force__GroupMembershipPsl</permissionSets>
+    <permissionSets>force__IndustriesARCPsl</permissionSets>
+    <permissionSets>force__IndustriesServiceExcellence</permissionSets>
+    <permissionSets>force__LifeEventsAccessPSL</permissionSets>
+    <permissionSets>force__OmniStudioUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

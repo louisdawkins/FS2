@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Collect_on_Wednesday__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Check if payment schedules should be collected on Wednesday.</description>
+    <inlineHelpText>Check if payment schedules should be collected on Wednesday.</inlineHelpText>
+    <label>Collect on Wednesday</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

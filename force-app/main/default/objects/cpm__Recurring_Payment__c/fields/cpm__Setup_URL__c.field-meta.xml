@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Setup_URL__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A URL to a payment page where the payer can update how the recurring payment will be paid. The update can change, for example, payment method and processor, mandate, payment profile and payment reference.</description>
+    <inlineHelpText>A URL to a payment page where the payer can update how the recurring donation will be paid.</inlineHelpText>
+    <label>Setup URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Mandate_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>cpm__Mandate_ID__c</fields>
+    <fields>cpm__Payment_Profile__c</fields>
+    <fields>cpm__Payment_Processor__c</fields>
+    <fields>cpm__Target__c</fields>
+    <fields>cpm__Active__c</fields>
+    <fields>cpm__Status__c</fields>
+    <label>Mandate Compact Layout</label>
+</CompactLayout>

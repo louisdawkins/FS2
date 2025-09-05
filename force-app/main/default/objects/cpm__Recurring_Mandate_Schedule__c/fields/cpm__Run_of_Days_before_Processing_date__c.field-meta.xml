@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Run_of_Days_before_Processing_date__c</fullName>
+    <defaultValue>0</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to calculate the run date. Processing date is calculated first and then this field is used to determine the run date. If a Business Hours record is attached, business days will be subtracted. If not, days, including weekends, are subtracted.</inlineHelpText>
+    <label>Run # of Business Days before Proc. Date</label>
+    <precision>2</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

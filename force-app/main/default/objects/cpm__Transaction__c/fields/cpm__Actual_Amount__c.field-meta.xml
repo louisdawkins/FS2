@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Actual_Amount__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Returns negative amount when type is debit</description>
+    <formula>IF(ISPICKVAL(cpm__Type__c, &apos;Debit&apos;), cpm__Amount__c *-1, cpm__Amount__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Returns negative amount when type is debit</inlineHelpText>
+    <label>Actual Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

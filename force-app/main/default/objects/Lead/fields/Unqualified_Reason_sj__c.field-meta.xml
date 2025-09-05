@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unqualified_Reason_sj__c</fullName>
+    <label>Unqualified Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Form of support not relevant</fullName>
+                <default>false</default>
+                <label>Form of support not relevant</label>
+            </value>
+            <value>
+                <fullName>Geographical area not relevant</fullName>
+                <default>false</default>
+                <label>Geographical area not relevant</label>
+            </value>
+            <value>
+                <fullName>Objectives not relevant</fullName>
+                <default>false</default>
+                <label>Objectives not relevant</label>
+            </value>
+            <value>
+                <fullName>Conflict with gift acceptance policy</fullName>
+                <default>false</default>
+                <label>Conflict with gift acceptance policy</label>
+            </value>
+            <value>
+                <fullName>No unsolicited applications</fullName>
+                <default>false</default>
+                <label>No unsolicited applications</label>
+            </value>
+            <value>
+                <fullName>Winding up</fullName>
+                <default>false</default>
+                <label>Winding up</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

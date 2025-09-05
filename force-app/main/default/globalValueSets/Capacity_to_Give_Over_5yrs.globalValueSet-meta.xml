@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A - £1m+</fullName>
+        <default>false</default>
+        <label>A - £1m+</label>
+    </customValue>
+    <customValue>
+        <fullName>B - £500-999k</fullName>
+        <default>false</default>
+        <label>B - £500-999k</label>
+    </customValue>
+    <customValue>
+        <fullName>C - £100-499k</fullName>
+        <default>false</default>
+        <label>C - £100-499k</label>
+    </customValue>
+    <customValue>
+        <fullName>D - £50-99k</fullName>
+        <default>false</default>
+        <label>D - £50-99k</label>
+    </customValue>
+    <customValue>
+        <fullName>E - £10-49k</fullName>
+        <default>false</default>
+        <label>E - £10-49k</label>
+    </customValue>
+    <customValue>
+        <fullName>F - Networks only</fullName>
+        <default>false</default>
+        <label>F - Networks only</label>
+    </customValue>
+    <masterLabel>Capacity to Give Over 5yrs</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

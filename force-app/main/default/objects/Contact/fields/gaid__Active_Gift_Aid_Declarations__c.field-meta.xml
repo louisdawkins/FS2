@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Active_Gift_Aid_Declarations__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Active Gift Aid Declarations (depr.)</label>
+    <summaryFilterItems>
+        <field>gaid__Gift_Aid_Declaration__c.gaid__Active__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>gaid__Gift_Aid_Declaration__c.gaid__Contact__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

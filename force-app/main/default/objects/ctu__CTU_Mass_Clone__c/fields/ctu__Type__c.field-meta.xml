@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ctu__Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Permission Set Assignment</fullName>
+                <default>false</default>
+                <label>Permission Set Assignment</label>
+            </value>
+            <value>
+                <fullName>Queue Membership</fullName>
+                <default>false</default>
+                <label>Queue Membership</label>
+            </value>
+            <value>
+                <fullName>Public Group Membership</fullName>
+                <default>false</default>
+                <label>Public Group Membership</label>
+            </value>
+            <value>
+                <fullName>Permission Set License Assignment</fullName>
+                <default>false</default>
+                <label>Permission Set License Assignment</label>
+            </value>
+            <value>
+                <fullName>Chatter Group</fullName>
+                <default>false</default>
+                <label>Chatter Group</label>
+            </value>
+            <value>
+                <fullName>Account Team Membership</fullName>
+                <default>false</default>
+                <label>Account Team Membership</label>
+            </value>
+            <value>
+                <fullName>Opportunity Team Membership</fullName>
+                <default>false</default>
+                <label>Opportunity Team Membership</label>
+            </value>
+            <value>
+                <fullName>Case Team Membership</fullName>
+                <default>false</default>
+                <label>Case Team Membership</label>
+            </value>
+            <value>
+                <fullName>Account Team</fullName>
+                <default>false</default>
+                <label>Account Team</label>
+            </value>
+            <value>
+                <fullName>Opportunity Team</fullName>
+                <default>false</default>
+                <label>Opportunity Team</label>
+            </value>
+            <value>
+                <fullName>Case Ownership</fullName>
+                <default>false</default>
+                <label>Case Ownership</label>
+            </value>
+            <value>
+                <fullName>Opportunity Ownership</fullName>
+                <default>false</default>
+                <label>Opportunity Ownership</label>
+            </value>
+            <value>
+                <fullName>Lead Ownership</fullName>
+                <default>false</default>
+                <label>Lead Ownership</label>
+            </value>
+            <value>
+                <fullName>Account Ownership</fullName>
+                <default>false</default>
+                <label>Account Ownership</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

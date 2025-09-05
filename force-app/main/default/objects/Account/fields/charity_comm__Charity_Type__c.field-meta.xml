@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>charity_comm__Charity_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Charity Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Previously excepted</fullName>
+                <default>false</default>
+                <label>Previously excepted</label>
+            </value>
+            <value>
+                <fullName>CIO</fullName>
+                <default>false</default>
+                <label>CIO</label>
+            </value>
+            <value>
+                <fullName>Charitable company</fullName>
+                <default>false</default>
+                <label>Charitable company</label>
+            </value>
+            <value>
+                <fullName>Trust</fullName>
+                <default>false</default>
+                <label>Trust</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

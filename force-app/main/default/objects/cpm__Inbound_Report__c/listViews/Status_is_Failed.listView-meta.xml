@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_is_Failed</fullName>
+    <columns>NAME</columns>
+    <columns>cpm__Report_Type__c</columns>
+    <columns>cpm__Report_SubType__c</columns>
+    <columns>cpm__Status__c</columns>
+    <columns>cpm__Payment_Intent_Id__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>cpm__Account__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>cpm__Status__c</field>
+        <operation>equals</operation>
+        <value>Error,Failed</value>
+    </filters>
+    <label>Status is Failed</label>
+</ListView>

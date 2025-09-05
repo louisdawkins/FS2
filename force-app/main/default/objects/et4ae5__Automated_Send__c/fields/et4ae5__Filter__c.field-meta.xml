@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__Filter__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Field Criteria can be used to further refine if a Triggered Send should be sent.  Criteria is evaluated when the selected Object Event occurs</inlineHelpText>
+    <label>Field Criteria</label>
+    <length>32768</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

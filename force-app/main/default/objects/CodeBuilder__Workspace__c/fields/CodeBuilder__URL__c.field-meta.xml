@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CodeBuilder__URL__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The url to the workspace ( web ide )</description>
+    <inlineHelpText>This is the url of the workspace. Opens in a new window.</inlineHelpText>
+    <label>URL</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

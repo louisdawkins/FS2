@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Process_Day_required_for_Weekly</fullName>
+    <active>true</active>
+    <errorConditionFormula>if (AND (RecordType.DeveloperName == &apos;Weekly&apos;,
+cpm__Process_on_Monday__c = false,
+cpm__Process_on_Tuesday__c = false,
+cpm__Process_on_Wednesday__c = false,
+cpm__Process_on_Thursday__c = false,
+cpm__Process_on_Friday__c = false,
+cpm__Process_on_Saturday__c = false,
+cpm__Process_on_Sunday__c = false
+),true,false)</errorConditionFormula>
+    <errorMessage>Please select one or more days to process on</errorMessage>
+</ValidationRule>

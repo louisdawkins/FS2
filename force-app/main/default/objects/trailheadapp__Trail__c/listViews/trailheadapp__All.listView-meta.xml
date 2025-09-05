@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>trailheadapp__All</fullName>
+    <columns>NAME</columns>
+    <columns>trailheadapp__Description__c</columns>
+    <columns>trailheadapp__Roles__c</columns>
+    <columns>trailheadapp__Level__c</columns>
+    <columns>trailheadapp__Created_At__c</columns>
+    <columns>trailheadapp__Badge_Icon__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>trailheadapp__Archived__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>All</label>
+</ListView>

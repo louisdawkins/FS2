@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__All</fullName>
+    <columns>cpm__Contact__c</columns>
+    <columns>NAME</columns>
+    <columns>cpm__Report_Type__c</columns>
+    <columns>cpm__Report_SubType__c</columns>
+    <columns>cpm__Status__c</columns>
+    <columns>cpm__Payment_Intent_Id__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>cpm__Contact__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All Inbound Reports</label>
+</ListView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__All2</fullName>
+    <columns>et4ae5__EmailName__c</columns>
+    <columns>et4ae5__Created_Date_Time__c</columns>
+    <columns>et4ae5__fBusiness_Unit__c</columns>
+    <columns>et4ae5__Send_Status_View__c</columns>
+    <columns>et4ae5__Status_Date_Time__c</columns>
+    <columns>et4ae5__FromName__c</columns>
+    <columns>et4ae5__FromEmail__c</columns>
+    <columns>et4ae5__Campaigns__c</columns>
+    <columns>et4ae5__Reports__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All2</label>
+    <language>en_US</language>
+</ListView>

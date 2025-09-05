@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Confirmation_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>By default the value is set to Date Made when you save the declaration; start of cooling-off period for oral declarations.</description>
+    <inlineHelpText>By default the value is set to Date Made when you save the declaration; start of cooling-off period for oral declarations.</inlineHelpText>
+    <label>Confirmation Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

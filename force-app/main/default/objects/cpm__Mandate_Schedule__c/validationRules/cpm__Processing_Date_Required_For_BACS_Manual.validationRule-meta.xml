@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Processing_Date_Required_For_BACS_Manual</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(cpm__Sub_Type__c = &apos;MANUAL&apos;, ISBLANK(cpm__Processing_Date__c) , CreatedDate &gt;=  DATETIMEVALUE(DATE(2021,7,20)) )</errorConditionFormula>
+    <errorDisplayField>cpm__Processing_Date__c</errorDisplayField>
+    <errorMessage>Processing Date is a required field for BACS Manual (FinDock as processor)</errorMessage>
+</ValidationRule>

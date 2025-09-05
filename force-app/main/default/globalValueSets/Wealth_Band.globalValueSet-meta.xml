@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A - £500m+</fullName>
+        <default>false</default>
+        <label>A - £500m+</label>
+    </customValue>
+    <customValue>
+        <fullName>B - £100m-£500m</fullName>
+        <default>false</default>
+        <label>B - £100m-£500m</label>
+    </customValue>
+    <customValue>
+        <fullName>C - £50m-£100m</fullName>
+        <default>false</default>
+        <label>C - £50m-£100m</label>
+    </customValue>
+    <customValue>
+        <fullName>D - £25m-£50m</fullName>
+        <default>false</default>
+        <label>D - £25m-£50m</label>
+    </customValue>
+    <customValue>
+        <fullName>E - £10m-£25m</fullName>
+        <default>false</default>
+        <label>E - £10m-£25m</label>
+    </customValue>
+    <customValue>
+        <fullName>F - £5m-£10m</fullName>
+        <default>false</default>
+        <label>F - £5m-£10m</label>
+    </customValue>
+    <customValue>
+        <fullName>G - £1m-£5m</fullName>
+        <default>false</default>
+        <label>G - £1m-£5m</label>
+    </customValue>
+    <customValue>
+        <fullName>H - £500k-£1m</fullName>
+        <default>false</default>
+        <label>H - £500k-£1m</label>
+    </customValue>
+    <customValue>
+        <fullName>I - £100k-£500k</fullName>
+        <default>false</default>
+        <label>I - £100k-£500k</label>
+    </customValue>
+    <customValue>
+        <fullName>J - &lt;£100k</fullName>
+        <default>false</default>
+        <label>J - &lt;£100k</label>
+    </customValue>
+    <customValue>
+        <fullName>E - £10k - £49K</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>E - £10k - £49K</label>
+    </customValue>
+    <customValue>
+        <fullName>D - £50k - £99k</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>D - £50k - £99k</label>
+    </customValue>
+    <customValue>
+        <fullName>C - £100k - £499k</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>C - £100k - £499k</label>
+    </customValue>
+    <customValue>
+        <fullName>B - £500k - £999k</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>B - £500k - £999k</label>
+    </customValue>
+    <customValue>
+        <fullName>A - £1M+</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>A - £1M+</label>
+    </customValue>
+    <description>Wealth Band picklist (shared across Lead and Account)</description>
+    <masterLabel>Wealth Band</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

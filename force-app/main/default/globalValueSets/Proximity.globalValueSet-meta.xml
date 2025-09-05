@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Can contact directly</fullName>
+        <default>false</default>
+        <label>Can contact directly</label>
+    </customValue>
+    <customValue>
+        <fullName>Senior vol can introduce</fullName>
+        <default>false</default>
+        <label>Senior vol can introduce</label>
+    </customValue>
+    <masterLabel>Proximity</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

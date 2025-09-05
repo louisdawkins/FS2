@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Account</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Account_Compact</compactLayoutAssignment>
+    <label>Business Account</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Tier__c</picklist>
+        <values>
+            <fullName>Tier 0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Acknowledgements__c</picklist>
+        <values>
+            <fullName>Acknowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do Not Acknowledge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Asked</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Funder_Type__c</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statutory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Accountancy%2C Banking and Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business%2C Consulting and Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charity and Voluntary work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative arts and design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy and Utilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering and Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FMCG - Non Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality and Events Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Enforcement and Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leisure%2C Sport and Tourism</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing%2C Advertising and PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media and Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Food Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property and Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Services and Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment and HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Science and Pharmaceuticals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport and Logistics</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partnership_Type__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COTY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supplier_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Registration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suspended</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Supplier_Tier__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Charity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statutory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust%2FFoundation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Wealth_Band__c</picklist>
+        <values>
+            <fullName>A - %C2%A3500m%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B - %C2%A3100m-%C2%A3500m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C - %C2%A350m-%C2%A3100m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D - %C2%A325m-%C2%A350m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E - %C2%A310m-%C2%A325m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F - %C2%A35m-%C2%A310m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G - %C2%A31m-%C2%A35m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H - %C2%A3500k-%C2%A31m</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I - %C2%A3100k-%C2%A3500k</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>J - %3C%C2%A3100k</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>charity_comm__Charity_Type__c</picklist>
+        <values>
+            <fullName>CIO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charitable company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Previously excepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>charity_comm__Registration_Status__c</picklist>
+        <values>
+            <fullName>Registered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Removed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

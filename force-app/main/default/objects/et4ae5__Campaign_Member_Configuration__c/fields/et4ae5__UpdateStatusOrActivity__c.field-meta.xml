@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__UpdateStatusOrActivity__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Determines if Campaign Member&apos;s Activity field (box is not checked) or the Status field (box is checked) will be updated if the Campaign Member is enabled.</description>
+    <label>UpdateStatusOrActivity</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

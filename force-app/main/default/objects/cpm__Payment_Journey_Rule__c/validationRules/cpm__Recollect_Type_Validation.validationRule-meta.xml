@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Recollect_Type_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>if (AND (ISPICKVAL( cpm__Type__c , &apos;Recollect&apos;),ISBLANK( cpm__Collect_Nr_Of_Business_Days_After_Run__c )),true,false)</errorConditionFormula>
+    <errorDisplayField>cpm__Collect_Nr_Of_Business_Days_After_Run__c</errorDisplayField>
+    <errorMessage>Collect number of Business Days After Run is required for &apos;Recollect&apos; Type</errorMessage>
+</ValidationRule>

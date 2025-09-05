@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_NPC_Payment_Method_field_value</name>
+        <label>Assign NPC Payment Method field value</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>NPCPaymentMethodFieldValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Direct Debit</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_NPC_Payment_Method_field_on_Gift_Commitment_Schedule</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>What_is_the_picklist_value_in_the_FinDock_Payment_Method_field</name>
+        <label>What is the picklist value in the FinDock Payment Method field?</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>BACS_Direct_Debit</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.fdff__Payment_Method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>BACS Direct Debit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_NPC_Payment_Method_field_value</targetReference>
+            </connector>
+            <label>BACS Direct Debit</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>rtb Gift Commitment Schedule - update NPC Payment Method field if FinDock Payment Method field populated {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>rtb Gift Commitment Schedule - update NPC Payment Method field if FinDock Payment Method field populated</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_NPC_Payment_Method_field_on_Gift_Commitment_Schedule</name>
+        <label>Update NPC Payment Method field on Gift Commitment Schedule</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <inputAssignments>
+            <field>PaymentMethod</field>
+            <value>
+                <elementReference>NPCPaymentMethodFieldValue</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>What_is_the_picklist_value_in_the_FinDock_Payment_Method_field</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>fdff__Payment_Method__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>GiftCommitmentSchedule</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>NPCPaymentMethodFieldValue</name>
+        <dataType>Picklist</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

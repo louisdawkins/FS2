@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pp4ph__PayPal_Billing_Agreement_Id__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Used to store the billing agreement id that is received from paypal in order to get the Mandate Id.</description>
+    <externalId>true</externalId>
+    <label>PayPal Billing Agreement Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

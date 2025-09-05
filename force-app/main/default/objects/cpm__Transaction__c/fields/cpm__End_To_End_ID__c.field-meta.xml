@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__End_To_End_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A Id provided by the initiating party for this transaction to identify the transaction throughout the process.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A Id provided by the initiating party for this transaction to identify the transaction throughout the process.</inlineHelpText>
+    <label>End To End ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

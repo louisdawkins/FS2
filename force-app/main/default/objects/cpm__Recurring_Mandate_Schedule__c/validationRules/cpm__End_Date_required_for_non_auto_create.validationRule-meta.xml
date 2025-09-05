@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__End_Date_required_for_non_auto_create</fullName>
+    <active>true</active>
+    <description>End date is a required field if the record is a non auto create record</description>
+    <errorConditionFormula>IF ( AND (!cpm__Auto_Create__c, ISBLANK( cpm__End_Date__c )), true, false)</errorConditionFormula>
+    <errorDisplayField>cpm__End_Date__c</errorDisplayField>
+    <errorMessage>End Date is a required field</errorMessage>
+</ValidationRule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Target__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Target</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>cpm__Payment_Processor__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FareShare Stripe Account</fullName>
+                <default>false</default>
+                <label>FareShare Stripe Account</label>
+            </value>
+            <value>
+                <fullName>Gather Stripe</fullName>
+                <default>false</default>
+                <label>Gather Stripe</label>
+            </value>
+            <value>
+                <fullName>Main</fullName>
+                <default>false</default>
+                <label>Main</label>
+            </value>
+            <value>
+                <fullName>FareShare GoCardless Account</fullName>
+                <default>false</default>
+                <label>FareShare GoCardless Account</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>PaymentHub-Stripe</controllingFieldValue>
+            <valueName>FareShare Stripe Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PaymentHub-Stripe</controllingFieldValue>
+            <valueName>Gather Stripe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PaymentHub-PayPal</controllingFieldValue>
+            <valueName>Main</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FinDock-GoCardless</controllingFieldValue>
+            <valueName>FareShare GoCardless Account</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

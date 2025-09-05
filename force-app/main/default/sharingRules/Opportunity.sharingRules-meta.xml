@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_with_Fundraising_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share non-Anon Opps with the Fundraising Team</description>
+        <label>Share with Fundraising Team</label>
+        <sharedTo>
+            <group>Fundraising_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Gift_Team__c</field>
+            <operation>equals</operation>
+            <value>Fundraising</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Anonymous__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Share_with_Super_Fundraising_Team</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with Super Fundraising Team</label>
+        <sharedTo>
+            <group>Fundraising_Superusers</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

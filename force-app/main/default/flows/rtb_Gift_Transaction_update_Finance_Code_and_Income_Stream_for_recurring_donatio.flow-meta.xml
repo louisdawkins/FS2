@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Finance_Code_to_P1170</name>
+        <label>Update Finance Code to P1170</label>
+        <locationX>578</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1170.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_and_Income_Stream_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Finance_Code_to_P1180</name>
+        <label>Update Finance Code to P1180</label>
+        <locationX>50</locationX>
+        <locationY>611</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1180.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Is_this_a_one_off_donation_or_recurring_donation</name>
+        <label>Is this a one off donation or recurring donation?</label>
+        <locationX>644</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>One_off_donation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GiftCommitmentScheduleId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>What_Giving_Page_did_this_one_off_donation_come_from</targetReference>
+            </connector>
+            <label>One off donation</label>
+        </rules>
+        <rules>
+            <name>Recurring_donation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GiftCommitmentScheduleId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>What_Giving_Page_did_this_recurring_donation_come_from</targetReference>
+            </connector>
+            <label>Recurring donation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>What_Giving_Page_did_this_one_off_donation_come_from</name>
+        <label>What Giving Page did this one off donation come from?</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Fuller_Lives</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Associated_Giving_Page__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IG - Fuller Lives</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1180</targetReference>
+            </connector>
+            <label>Fuller Lives</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>What_Giving_Page_did_this_recurring_donation_come_from</name>
+        <label>What Giving Page did this recurring donation come from?</label>
+        <locationX>710</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_1_of_What_Giving_Page_did_this_recurring_donation_come_from</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GiftCommitmentSchedule.Associated_Giving_Page__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IG - Fuller Lives</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1170</targetReference>
+            </connector>
+            <label>Outcome 1 of What Giving Page did this recurring donation come from?</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>rtb Gift Transaction - update Finance Code if originates from IG page {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>rtb Gift Transaction - update Finance Code (and Income Stream for recurring donations) if originates from IG page</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Finance_Code_P1170</name>
+        <label>Get Finance Code P1170</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code_to_P1170</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1170 - Individual Regular Donors</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Finance_Code_P1180</name>
+        <label>Get Finance Code P1180</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code_to_P1180</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1180 - Individual Donors Cash Unrestricted</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Finance_Code_and_Income_Stream_on_Gift_Transaction</name>
+        <label>Update Finance Code and Income Stream on Gift Transaction</label>
+        <locationX>578</locationX>
+        <locationY>719</locationY>
+        <inputAssignments>
+            <field>Finance_Code__c</field>
+            <value>
+                <elementReference>FinanceCode</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Income_Stream__c</field>
+            <value>
+                <stringValue>IG</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Finance_Code_on_Gift_Transaction</name>
+        <label>Update Finance Code on Gift Transaction</label>
+        <locationX>50</locationX>
+        <locationY>719</locationY>
+        <inputAssignments>
+            <field>Finance_Code__c</field>
+            <value>
+                <elementReference>FinanceCode</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>518</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_this_a_one_off_donation_or_recurring_donation</targetReference>
+        </connector>
+        <object>GiftTransaction</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>FinanceCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

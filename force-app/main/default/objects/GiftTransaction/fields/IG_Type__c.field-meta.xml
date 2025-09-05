@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IG_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    RecordType.Name = &quot;Receivable&quot;,
+    IF(
+        ISBLANK(GiftCommitmentId),
+        &quot;Cash Giver&quot;,
+        &quot;Regular Giver&quot;
+    ),
+    IF(
+        RecordType.Name = &quot;Gift Aid&quot;,
+        &quot;Gift Aid&quot;,
+        &quot;&quot;
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IG Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

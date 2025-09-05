@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Known interest area</fullName>
+        <default>false</default>
+        <label>Known interest area</label>
+    </customValue>
+    <customValue>
+        <fullName>Past interest</fullName>
+        <default>false</default>
+        <label>Past interest</label>
+    </customValue>
+    <masterLabel>Affinity</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

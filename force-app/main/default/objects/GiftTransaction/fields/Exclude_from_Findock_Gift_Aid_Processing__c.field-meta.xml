@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exclude_from_Findock_Gift_Aid_Processing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This checkbox ensures that related instalments auto created by Findock for Gift Aid Transactions are not eligible for Gift Aid</description>
+    <inlineHelpText>Excludes related instalments from Gift Aid claims</inlineHelpText>
+    <label>Exclude from Findock Gift Aid Processing</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

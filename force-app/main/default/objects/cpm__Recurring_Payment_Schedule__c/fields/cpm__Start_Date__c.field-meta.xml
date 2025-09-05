@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Start_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Start date of the period that payment schedule records will be generated for. Payment schedule records will be generated with a collection date as of the start date, but not before the start date.</inlineHelpText>
+    <label>Start Date</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

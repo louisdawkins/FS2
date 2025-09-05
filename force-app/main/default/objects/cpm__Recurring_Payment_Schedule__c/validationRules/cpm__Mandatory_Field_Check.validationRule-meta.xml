@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Mandatory_Field_Check</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF ( OR ( ISBLANK(TEXT(cpm__Payment_Processor__c)) , ISBLANK (TEXT(cpm__Payment_Method__c)), ISBLANK(TEXT(cpm__Source__c)) ), true, false )</errorConditionFormula>
+    <errorMessage>Payment Method, Payment Processor and Source are required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__HardBounce__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>The email sent to this subscriber  was rejected due to permanent conditions (this typically results when &quot;user unknown&quot; or &quot;domain not found&quot; errors occur)</inlineHelpText>
+    <label>Hard Bounce</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

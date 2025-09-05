@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Managing_Person_Accounts_User_Guide</fullName>
+    <availability>online</availability>
+    <description>Confluence page designed to show how to create and maintain a person account.</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Managing Person Accounts - User Guide</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>https://fareshare.atlassian.net/wiki/spaces/FFUG/pages/2837250049/Managing+Person+Accounts</url>
+</WebLink>

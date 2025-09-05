@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The current status for this transaction record.</description>
+    <inlineHelpText>The current status for this transaction record.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Manual</fullName>
+                <default>false</default>
+                <label>Manual</label>
+            </value>
+            <value>
+                <fullName>Matched</fullName>
+                <default>false</default>
+                <label>Matched</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>No Match</fullName>
+                <default>false</default>
+                <label>No Match</label>
+            </value>
+            <value>
+                <fullName>Processed</fullName>
+                <default>false</default>
+                <label>Processed</label>
+            </value>
+            <value>
+                <fullName>Ignored</fullName>
+                <default>false</default>
+                <label>Ignored</label>
+            </value>
+            <value>
+                <fullName>Manual Matched</fullName>
+                <default>false</default>
+                <label>Manual Matched</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Processing</fullName>
+                <default>false</default>
+                <label>Processing</label>
+            </value>
+            <value>
+                <fullName>Batch Failed</fullName>
+                <default>false</default>
+                <label>Batch Failed</label>
+            </value>
+            <value>
+                <fullName>Partially Matched</fullName>
+                <default>false</default>
+                <label>Partially Matched</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Guided Review</fullName>
+                <default>false</default>
+                <label>Guided Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

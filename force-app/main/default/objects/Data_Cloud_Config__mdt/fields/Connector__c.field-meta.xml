@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Connector__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this if the value is a data source</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this if the value is a data source</inlineHelpText>
+    <label>Connector</label>
+    <type>Checkbox</type>
+</CustomField>

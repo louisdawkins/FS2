@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>FinDock Integration User</label>
+    <permissionSets>cpm__FinDock_Accept_And_Manage_Payments_Online</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Bank_Feed_Integration</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Base</permissionSets>
+    <permissionSets>cpm__FinDock_Core_File_Based_Payments</permissionSets>
+    <permissionSets>cpm__FinDock_Mandate_Schedule</permissionSets>
+    <permissionSets>cpm__FinDock_Payment_Schedule</permissionSets>
+    <permissionSets>fdff__FinDock_for_Fundraising_Base</permissionSets>
+    <permissionSets>fdff__FinDock_for_Fundraising_Integration</permissionSets>
+    <permissionSets>gaid__FinDock_GiftAid</permissionSets>
+    <permissionSets>gaid__FinDock_GiftAid_Base</permissionSets>
+    <permissionSets>gcf__FinDock_GoCardless</permissionSets>
+    <permissionSets>gcf__FinDock_GoCardless_Base</permissionSets>
+    <permissionSets>phstr__FinDock_Accept_And_Process_Payments_Stripe</permissionSets>
+    <permissionSets>phstr__FinDock_Stripe_Base</permissionSets>
+    <permissionSets>proh__FinDock_ProcessingHub</permissionSets>
+    <permissionSets>proh__FinDock_ProcessingHub_Base</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

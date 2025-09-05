@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Payment_Processor__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Payment Processor</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>cpm__PaymentMethod__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PaymentHub-Stripe</fullName>
+                <default>false</default>
+                <label>PaymentHub-Stripe</label>
+            </value>
+            <value>
+                <fullName>FinDock-GoCardless</fullName>
+                <default>false</default>
+                <label>FinDock-GoCardless</label>
+            </value>
+            <value>
+                <fullName>PaymentHub-PayPal</fullName>
+                <default>false</default>
+                <label>PaymentHub-PayPal</label>
+            </value>
+            <value>
+                <fullName>PaymentHub-GiftAid</fullName>
+                <default>false</default>
+                <label>PaymentHub-GiftAid</label>
+            </value>
+            <value>
+                <fullName>PaymentHub-MT940</fullName>
+                <default>false</default>
+                <label>PaymentHub-MT940</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CreditCard</controllingFieldValue>
+            <valueName>PaymentHub-Stripe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PayPal</controllingFieldValue>
+            <valueName>PaymentHub-PayPal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BACS Direct Debit</controllingFieldValue>
+            <valueName>FinDock-GoCardless</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GiftAid</controllingFieldValue>
+            <valueName>PaymentHub-GiftAid</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

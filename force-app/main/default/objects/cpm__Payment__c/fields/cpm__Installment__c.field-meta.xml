@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Installment__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>The installment this payment originated from.</description>
+    <inlineHelpText>The installment this payment originated from.</inlineHelpText>
+    <label>Installment</label>
+    <referenceTo>cpm__Installment__c</referenceTo>
+    <relationshipLabel>Payments</relationshipLabel>
+    <relationshipName>Donations</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

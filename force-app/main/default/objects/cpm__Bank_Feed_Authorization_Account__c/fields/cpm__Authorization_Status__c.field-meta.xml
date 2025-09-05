@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Authorization_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The status of the authorization for this account connection.</description>
+    <externalId>false</externalId>
+    <formula>TEXT(cpm__Bank_Feed_Authorization__r.cpm__Status__c)</formula>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

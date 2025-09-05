@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Default_Bank_Statement_is_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF ( ISBLANK ( cpm__Bank_Statement_Description__c ) , true , false )</errorConditionFormula>
+    <errorDisplayField>cpm__Bank_Statement_Description__c</errorDisplayField>
+    <errorMessage>Default Bank Statement Description is required</errorMessage>
+</ValidationRule>

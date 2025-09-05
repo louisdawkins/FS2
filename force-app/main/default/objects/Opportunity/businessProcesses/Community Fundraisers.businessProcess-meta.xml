@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community Fundraisers</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Complete</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Delayed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Engaged %26 Stewarded</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Highly Engaged %26 Stewarded</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Relationship Instigated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Renewal</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

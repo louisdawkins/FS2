@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Close_Reason__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Reason for closing the declaration. Only “Termination of Employment” is pre-shipped. Other values can be added through customization.</description>
+    <inlineHelpText>Reason for closing the declaration. Only “Termination of Employment” is pre-shipped. Other values can be added through customization.</inlineHelpText>
+    <label>Close Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TerminationOfEmployment</fullName>
+                <default>false</default>
+                <label>Termination Of Employment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

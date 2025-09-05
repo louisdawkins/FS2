@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Date_Made__c</fullName>
+    <defaultValue>TODAY()</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Date the declaration was made (or when you received it).</description>
+    <inlineHelpText>Date the declaration was made (or when you received it).</inlineHelpText>
+    <label>Date Made</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

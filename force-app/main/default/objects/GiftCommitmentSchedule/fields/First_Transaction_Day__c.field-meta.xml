@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Transaction_Day__c</fullName>
+    <formula>IF(
+    AND(
+        NOT(ISBLANK(TEXT(TransactionDay))),
+        OR(
+            TODAY() &gt;= DATE(YEAR(TODAY()), MONTH(TODAY()), VALUE(TEXT(TransactionDay))) - 5,
+            TODAY() &lt;= DATE(YEAR(TODAY()), MONTH(TODAY()), VALUE(TEXT(TransactionDay))) + 5
+        )
+    ),
+    DATE(
+        YEAR(ADDMONTHS(TODAY(), 1)),
+        MONTH(ADDMONTHS(TODAY(), 1)),
+        VALUE(TEXT(TransactionDay))
+    ),
+    IF(
+        TODAY() &lt;= DATE(YEAR(TODAY()), MONTH(TODAY()), VALUE(TEXT(TransactionDay))),
+        DATE(
+            YEAR(TODAY()),
+            MONTH(TODAY()),
+            VALUE(TEXT(TransactionDay))
+        ),
+        DATE(
+            YEAR(ADDMONTHS(TODAY(), 1)),
+            MONTH(ADDMONTHS(TODAY(), 1)),
+            VALUE(TEXT(TransactionDay))
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>First Transaction Day</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

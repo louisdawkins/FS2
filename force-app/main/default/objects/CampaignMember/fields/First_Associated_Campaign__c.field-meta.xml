@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Associated_Campaign__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to confirm that this is the first Campaign the Contact has been associated with.</description>
+    <label>First Associated Campaign</label>
+    <type>Checkbox</type>
+</CustomField>

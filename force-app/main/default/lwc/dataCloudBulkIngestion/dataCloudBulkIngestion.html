@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Data Cloud Bulk Ingestion" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="connector"
+                label="Select the Data Source"
+                value={connectorValue}
+                placeholder="Select Connector"
+                options={connectorOptions}
+                onchange={handleConnectorChange} 
+                required>
+            </lightning-combobox>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input 
+                type="file" 
+                accept=".csv" 
+                label="Attachment (max. size 150 MB)" 
+                onchange={handleFileChange}
+                required>
+            </lightning-input>
+        </div>
+        <template if:true={fileUploaded}>
+            <p class="slds-m-around_medium">{fileName}</p>
+        </template>
+        <lightning-button 
+            variant="brand" 
+            label="Upload" 
+            title="Upload" 
+            class="slds-m-left_x-small"
+            disabled={isUploadDisabled}
+            onclick={handleUploadData}>
+        </lightning-button>
+    </lightning-card>
+</template>

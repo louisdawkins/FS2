@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaigns_with_fundraising_pages</fullName>
+    <columns>md_npc_pack__Fundraising_Account__c</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Finance_Code__c</columns>
+    <columns>Fundraising_Page_URL__c</columns>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Fundraising_Page_URL__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Campaigns with Just Giving pages</label>
+    <sharedTo>
+        <group>Fundraising_Team</group>
+    </sharedTo>
+</ListView>

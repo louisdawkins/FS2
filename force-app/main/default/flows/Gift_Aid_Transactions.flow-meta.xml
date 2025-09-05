@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Gift_Transaction_Values</name>
+        <label>Set Gift Transaction Values</label>
+        <locationX>176</locationX>
+        <locationY>360</locationY>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.OriginalAmount</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.cpm__Amount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GiftTransactionName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.fdff__Payment_Method__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.cpm__Payment_Method__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.DonorId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.cpm__Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.Exclude_from_Findock_Gift_Aid_Processing__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GiftAidTransactionTypeId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Paid</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.TransactionDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.cpm__Due_Date__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.Income_Stream__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.gaid__Related_Transaction__r.fdff__GiftTransaction__r.Income_Stream__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.PaymentMethod</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.cpm__Payment_Method__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GiftTransactionItemtoCreate.Finance_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxFinanceCode</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Gift_Aid_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <description>Creates gift aid transactions once gift aid instalment records have been created by Findock after an HMRC claim is made.
+Currently Findock does not create transactions for Instalments, this flow will handle that requirement.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Uses the Gift Aid Finance code of the finance code related to the Gift Transaction for the original donation, when populated. Otherwise uses the Finance Code Related to the gift transaction for the original donation.</description>
+        <name>fxFinanceCode</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISBLANK({!$Record.gaid__Related_Transaction__r.fdff__GiftTransaction__r.Finance_Code__r.Gift_Aid_Finance_Code__c}),
+{!$Record.gaid__Related_Transaction__r.fdff__GiftTransaction__r.Finance_Code__c},
+{!$Record.gaid__Related_Transaction__r.fdff__GiftTransaction__r.Finance_Code__r.Gift_Aid_Finance_Code__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <description>Gift Transaction Naming convention</description>
+        <name>GiftTransactionName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.cpm__Account__r.FirstName} 
+&amp; &quot; &quot; &amp;
+{!$Record.cpm__Account__r.LastName} 
+&amp; &quot; - &quot; &amp; 
+TEXT({!$Record.cpm__Amount__c}) 
+&amp; &quot; - &quot; &amp; 
+
+IF(LEN(TEXT( DAY( {!$Record.cpm__Due_Date__c} ) ))=1,
+&quot;0&quot;&amp; TEXT( DAY( {!$Record.cpm__Due_Date__c} ) ), 
+TEXT( DAY( {!$Record.cpm__Due_Date__c} ) ))
+
+&amp; &quot;/&quot; &amp; 
+
+IF(LEN(TEXT( MONTH( {!$Record.cpm__Due_Date__c} ) ))=1,
+&quot;0&quot;&amp; TEXT( MONTH( {!$Record.cpm__Due_Date__c} ) ), 
+TEXT( MONTH( {!$Record.cpm__Due_Date__c} ) ))
+
+
+ &amp; &quot;/&quot; &amp;  
+
+
+TEXT( YEAR(  {!$Record.cpm__Due_Date__c} ) )</expression>
+    </formulas>
+    <interviewLabel>Gift Aid Transactions {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Gift Aid Transactions</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Gift_Aid_Transaction</name>
+        <label>Create Gift Aid Transaction</label>
+        <locationX>176</locationX>
+        <locationY>468</locationY>
+        <connector>
+            <targetReference>Update_Instalment_Records</targetReference>
+        </connector>
+        <inputReference>GiftTransactionItemtoCreate</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Gift_Transaction_Record_Type_ID</name>
+        <label>Get Gift Transaction Record Type ID</label>
+        <locationX>176</locationX>
+        <locationY>252</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Gift_Transaction_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Gift_Aid</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>GiftAidTransactionTypeId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Donation_Transaction</name>
+        <label>Update Donation Transaction</label>
+        <locationX>176</locationX>
+        <locationY>684</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.gaid__Related_Transaction__r.fdff__GiftTransaction__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Related_Gift_Aid_Transaction__c</field>
+            <value>
+                <elementReference>GiftTransactionItemtoCreate.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>GiftTransaction</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Instalment_Records</name>
+        <label>Update Instalment Records</label>
+        <locationX>176</locationX>
+        <locationY>576</locationY>
+        <connector>
+            <targetReference>Update_Donation_Transaction</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>fdff__GiftTransaction__c</field>
+            <value>
+                <elementReference>GiftTransactionItemtoCreate.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Gift_Transaction_Record_Type_ID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>fdff__GiftTransaction__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>cpm__Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Collected</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>null__NotFound</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>cpm__Installment__c</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2024-05-17</startDate>
+            <startTime>01:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <variables>
+        <description>Stores the Id for the Gift Aid record type</description>
+        <name>GiftAidInstalmentTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>GiftAidTransactionTypeId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>GiftTransactionItemtoCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>GiftTransaction</objectType>
+    </variables>
+    <variables>
+        <name>InstalmentItemtoCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>cpm__Installment__c</objectType>
+    </variables>
+    <variables>
+        <name>ListGiftTransactionToCreate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>GiftTransaction</objectType>
+    </variables>
+    <variables>
+        <description>Lists the instalment records to update &apos;Gift Transaction Created&apos; to TRUE</description>
+        <name>ListInstalmentRecordsToUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>cpm__Installment__c</objectType>
+    </variables>
+</Flow>

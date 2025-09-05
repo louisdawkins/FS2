@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Statement__c</fullName>
+    <label>Consent Statement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CAFGAYE1</fullName>
+                <default>false</default>
+                <label>Email sent by CAF: at the bottom of the page, it asks whether the donor wishes to share their details with the charity.  If they click on the box, the donations they make will be sent to the charity anonymously.</label>
+            </value>
+            <value>
+                <fullName>CAFOnline1</fullName>
+                <default>false</default>
+                <label>If you do not tick this box, your personal contact information and donation details will be sent to the organisation you are donating to. It may be stored and used by them to get in touch with you.</label>
+            </value>
+            <value>
+                <fullName>CharitableGiving1</fullName>
+                <default>false</default>
+                <label>If you check any of the boxes below the information you provide will be shared with the charity. Charitable Giving is not responsible for how your charities use this information. If you do not check any of the boxes, then your details won&apos;t shared.</label>
+            </value>
+            <value>
+                <fullName>WorkForGood1</fullName>
+                <default>false</default>
+                <label>If &apos;yes&apos;, Work for Good will share your name and email address with the charity so they can keep in touch about the impact of your fundriasing and other ways to support them. You can update your preferences directly with the charity at any time.</label>
+            </value>
+            <value>
+                <fullName>Benevity1</fullName>
+                <default>false</default>
+                <label>You may choose to send a message to this charity along with your gift. Please note that specific instructions on the use of these funds are not binding for the recipient. Your name will be included with any optional comments you choose to add.</label>
+            </value>
+            <value>
+                <fullName>JustGiving1</fullName>
+                <default>false</default>
+                <label>I’m happy for FareShare to keep in touch with me by email about the impact of my donation and other ways I can support them in the future. I understand that JustGiving will need to pass my information to them in order for them to do so.</label>
+            </value>
+            <value>
+                <fullName>CharitiesTrust1</fullName>
+                <default>false</default>
+                <label>The charity is only permitted to contact you if you give them specific consent. To opt in to receive information, please indicate your contact preferences by ticking the relevant boxes. No boxes ticked means that no contact info is passed to the charity.</label>
+            </value>
+            <value>
+                <fullName>Enthuse1</fullName>
+                <default>false</default>
+                <label>We&apos;d love to keep you up to date on FareShare&apos;s work including fundraising updates. Please let us know if it&apos;s okay to contact you. We&apos;ll never share your data with third parties for marketing purposes</label>
+            </value>
+            <value>
+                <fullName>DONR1</fullName>
+                <default>false</default>
+                <label>Please email me updated on how my donation is helping and ways to get involved. I would like to hear from: [Box for FareShare]</label>
+            </value>
+            <value>
+                <fullName>HandsOnPayrollGiving1</fullName>
+                <default>false</default>
+                <label>Opting in to receive communications means you can see how your charity use your gift. Please indicate which channels your charity may use. If you select no contact then you won&apos;t hear from your charity. We will never share your details without consent.</label>
+            </value>
+            <value>
+                <fullName>SocialSync1</fullName>
+                <default>false</default>
+                <label>We would love to talk to you in the future about our work and the different opportunities to support FareShare such as fundraising, volunteering, donating, and campaigning. You can update your contact preferences at any time by calling us or emailing</label>
+            </value>
+            <value>
+                <fullName>BigGive1</fullName>
+                <default>false</default>
+                <label>Would you like to receive emails from FareShare? Yes I&apos;m happy to recieve emails from FareShare. Would you like to receive emails from The Big Give? Yes I would like to receive emails from The Big Give.</label>
+            </value>
+            <value>
+                <fullName>PayrollGiA1</fullName>
+                <default>false</default>
+                <label>By using the PGiA website or submitting data to PGiA, each user consents to the use of a user personal data in the manner set out in the PGiA privacy statement.</label>
+            </value>
+            <value>
+                <fullName>CommittedGiving1</fullName>
+                <default>false</default>
+                <label>We may send you information about products and services of ours that we believe may be of interest to you. You have the right at any time to stop us contacting you. If you no longer wish to be contacted for marketing purposes, please contact us.</label>
+            </value>
+            <value>
+                <fullName>Return1</fullName>
+                <default>false</default>
+                <label>We may send you information about products and services of ours that we believe may be of interest to you. You have the right at any time to stop us contacting you. If you no longer wish to be contacted for marketing purposes, please contact us</label>
+            </value>
+            <value>
+                <fullName>VirginMoney1</fullName>
+                <default>false</default>
+                <label>We commit to never using personal details for marketing purposes if customers tell us not to, only sending marketing info in the format they’ve agreed (email, post, SMS &amp; telephone), not passing customer data to a third party for marketing reasons.</label>
+            </value>
+            <value>
+                <fullName>GiveStar1</fullName>
+                <default>false</default>
+                <label>I am happy for FareShare to email me using the email address I have provided.</label>
+            </value>
+            <value>
+                <fullName>UpwardComms1</fullName>
+                <default>false</default>
+                <label>Please let us know if you are happy for FareShare to keep in touch with you about the impact of my donation and other ways you can support them in the future</label>
+            </value>
+            <value>
+                <fullName>We would love to talk to you in the future about our work and the different opportunities to support FS and get involved. For full details of how we use your data, please read our Privacy Policy. Please let us know how you&apos;re happy to hear from FS</fullName>
+                <default>false</default>
+                <label>We would love to talk to you in the future about our work and the different opportunities to support FS and get involved. For full details of how we use your data, please read our Privacy Policy. Please let us know how you&apos;re happy to hear from FS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Repeat_Frequency__c</fullName>
+    <defaultValue>1</defaultValue>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Best explained with an example. If value is 3:
+- Weekly: Payment schedule records will be generated once every 3 weeks. 
+- Monthly: Payment schedule records will be generated every quarter. 
+Typical value: 1, so once every week or month.</inlineHelpText>
+    <label>Repeat Frequency</label>
+    <precision>2</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

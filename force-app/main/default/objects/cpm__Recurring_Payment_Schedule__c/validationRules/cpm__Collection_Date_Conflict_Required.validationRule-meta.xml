@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Collection_Date_Conflict_Required</fullName>
+    <active>true</active>
+    <description>Collection date conflict strategy is required when it is an Auto Create Record</description>
+    <errorConditionFormula>if (AND (cpm__Auto_Create__c,ISBLANK(TEXT(  cpm__Collection_Date_Conflict_Strategy__c  ))),true,false)</errorConditionFormula>
+    <errorDisplayField>cpm__Collection_Date_Conflict_Strategy__c</errorDisplayField>
+    <errorMessage>Collection Date Conflict Strategy is required</errorMessage>
+</ValidationRule>

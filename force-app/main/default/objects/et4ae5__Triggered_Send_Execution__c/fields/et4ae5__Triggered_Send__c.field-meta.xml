@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__Triggered_Send__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Triggered Send</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Trggered Send must be active in order to be selected.</errorMessage>
+        <filterItems>
+            <field>et4ae5__Automated_Send__c.et4ae5__Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>et4ae5__Automated_Send__c</referenceTo>
+    <relationshipLabel>Triggered Send Executions</relationshipLabel>
+    <relationshipName>Triggered_Send_Executions</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

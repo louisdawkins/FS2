@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Entry_Reference__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Internal CAMT.053 reference for an Entry Node in the file (NtryRef)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Internal CAMT.053 reference for an Entry Node in the file (NtryRef)</inlineHelpText>
+    <label>Entry Reference</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

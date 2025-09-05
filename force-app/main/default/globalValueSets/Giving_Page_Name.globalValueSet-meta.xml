@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Winter Appeal</fullName>
+        <default>false</default>
+        <label>Winter Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>IG - Fuller Lives</fullName>
+        <default>false</default>
+        <label>IG - Fuller Lives</label>
+    </customValue>
+    <customValue>
+        <fullName>Fuller Lives</fullName>
+        <default>false</default>
+        <label>Fuller Lives</label>
+    </customValue>
+    <customValue>
+        <fullName>Coca Cola Xmas Truck</fullName>
+        <default>false</default>
+        <label>Coca Cola Xmas Truck</label>
+    </customValue>
+    <customValue>
+        <fullName>KPMG</fullName>
+        <default>false</default>
+        <label>KPMG</label>
+    </customValue>
+    <customValue>
+        <fullName>Let&apos;s Make a Meal of It</fullName>
+        <default>false</default>
+        <label>Let&apos;s Make a Meal of It</label>
+    </customValue>
+    <customValue>
+        <fullName>Mass Giving</fullName>
+        <default>false</default>
+        <label>Mass Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Monthly</fullName>
+        <default>false</default>
+        <label>Monthly</label>
+    </customValue>
+    <customValue>
+        <fullName>More than Meals</fullName>
+        <default>false</default>
+        <label>More than Meals</label>
+    </customValue>
+    <customValue>
+        <fullName>One-Time</fullName>
+        <default>false</default>
+        <label>One-Time</label>
+    </customValue>
+    <customValue>
+        <fullName>Spring Appeal</fullName>
+        <default>false</default>
+        <label>Spring Appeal</label>
+    </customValue>
+    <customValue>
+        <fullName>IG - Fuller Lives Now</fullName>
+        <default>false</default>
+        <label>IG - Fuller Lives Now</label>
+    </customValue>
+    <customValue>
+        <fullName>test</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>test</label>
+    </customValue>
+    <masterLabel>Giving Page Name</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

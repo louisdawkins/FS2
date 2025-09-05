@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anonymous__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To capture if the donor wants this opportunity to remain anonymous.</description>
+    <inlineHelpText>Checking this checkbox will make this opportunity visible only to the opportunity owner or users with Salesforce administration rights.</inlineHelpText>
+    <label>Anonymous</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

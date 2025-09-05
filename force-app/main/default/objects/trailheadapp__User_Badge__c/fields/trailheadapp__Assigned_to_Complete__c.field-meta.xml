@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>trailheadapp__Assigned_to_Complete__c</fullName>
+    <deprecated>false</deprecated>
+    <description>If assigned date is not null, use the difference between assigned date and finished date. If assigned date is null, use the difference between first attempted date and finished date. If finished date is null, don&apos;t show anything.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(trailheadapp__Assigned_Date__c),trailheadapp__Finished_Date__c - trailheadapp__First_Attempted_Date__c , trailheadapp__Finished_Date__c - trailheadapp__Assigned_Date__c  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>How long it took to complete from when it was first assigned or first attempted if not assigned.</inlineHelpText>
+    <label>Duration to Complete (Days)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

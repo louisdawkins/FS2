@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FareShare_Ingestion</fullName>
+    <columns>Name</columns>
+    <columns>ObjectCategory</columns>
+    <columns>DataLakeObjectStatus</columns>
+    <columns>LastRefreshDate</columns>
+    <columns>TotalRecords</columns>
+    <columns>Storage</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Name</field>
+        <operation>contains</operation>
+        <value>-File</value>
+    </filters>
+    <label>FareShare Ingestion</label>
+</ListView>

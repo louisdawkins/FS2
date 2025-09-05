@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unique_Tracking_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>Giving_Page__c &amp; &quot;?custom_campaign_gyl2Rcdo3iyGaF9=&quot; &amp; CampaignId &amp; &quot;&amp;custom_4iTgaBwgECeAOdU=&quot; &amp;  Id &amp; &quot;&amp;custom_njigQpQL2fVlSzI=&quot; &amp;  Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Unique Tracking URL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

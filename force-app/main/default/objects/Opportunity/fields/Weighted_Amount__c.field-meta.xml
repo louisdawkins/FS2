@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weighted_Amount__c</fullName>
+    <formula>Amount* 
+CASE(
+    TEXT(Likelihood__c), 
+    &quot;10%&quot;, 0.10, 
+    &quot;20%&quot;, 0.20, 
+    &quot;30%&quot;, 0.30, 
+    &quot;40%&quot;, 0.40, 
+    &quot;50%&quot;, 0.50, 
+    &quot;60%&quot;, 0.60, 
+    &quot;70%&quot;, 0.70, 
+    &quot;80%&quot;, 0.80, 
+    &quot;90%&quot;, 0.90, 
+    0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Weighted Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Currency</type>
+</CustomField>

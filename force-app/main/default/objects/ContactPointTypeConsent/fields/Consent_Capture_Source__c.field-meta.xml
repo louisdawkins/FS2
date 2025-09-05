@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_Capture_Source__c</fullName>
+    <label>Consent Capture Source</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Direct Email</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Direct Phone</label>
+            </value>
+            <value>
+                <fullName>Donations on website</fullName>
+                <default>false</default>
+                <label>Donations on website</label>
+            </value>
+            <value>
+                <fullName>POD portal</fullName>
+                <default>false</default>
+                <label>POD portal</label>
+            </value>
+            <value>
+                <fullName>Event ticket sales</fullName>
+                <default>false</default>
+                <label>Event ticket sales</label>
+            </value>
+            <value>
+                <fullName>Referral Sign Ups</fullName>
+                <default>false</default>
+                <label>Referral Sign Ups</label>
+            </value>
+            <value>
+                <fullName>Campaign actions</fullName>
+                <default>false</default>
+                <label>Campaign actions</label>
+            </value>
+            <value>
+                <fullName>Global Opt Out</fullName>
+                <default>false</default>
+                <label>Global Opt Out</label>
+            </value>
+            <value>
+                <fullName>CAF GAYE</fullName>
+                <default>false</default>
+                <label>CAF GAYE</label>
+            </value>
+            <value>
+                <fullName>CAF Online/Direct</fullName>
+                <default>false</default>
+                <label>CAF Online/Direct</label>
+            </value>
+            <value>
+                <fullName>Charitable Giving</fullName>
+                <default>false</default>
+                <label>Charitable Giving</label>
+            </value>
+            <value>
+                <fullName>Work for Good</fullName>
+                <default>false</default>
+                <label>Work for Good</label>
+            </value>
+            <value>
+                <fullName>Benevity</fullName>
+                <default>false</default>
+                <label>Benevity</label>
+            </value>
+            <value>
+                <fullName>Just Giving</fullName>
+                <default>false</default>
+                <label>JustGiving</label>
+            </value>
+            <value>
+                <fullName>Charities Trust (Payroll)</fullName>
+                <default>false</default>
+                <label>Charities Trust (Payroll)</label>
+            </value>
+            <value>
+                <fullName>Enthuse</fullName>
+                <default>false</default>
+                <label>Enthuse</label>
+            </value>
+            <value>
+                <fullName>Donr</fullName>
+                <default>false</default>
+                <label>Donr</label>
+            </value>
+            <value>
+                <fullName>Hands on Payroll Giving</fullName>
+                <default>false</default>
+                <label>Hands on Payroll Giving</label>
+            </value>
+            <value>
+                <fullName>Marketing Cloud</fullName>
+                <default>false</default>
+                <label>Marketing Cloud</label>
+            </value>
+            <value>
+                <fullName>Mailing Preference Service</fullName>
+                <default>false</default>
+                <label>Mailing Preference Service</label>
+            </value>
+            <value>
+                <fullName>FinDock Giving Page</fullName>
+                <default>false</default>
+                <label>FinDock Giving Page</label>
+            </value>
+            <value>
+                <fullName>Fundraising Preference Service</fullName>
+                <default>false</default>
+                <label>Fundraising Preference Service</label>
+            </value>
+            <value>
+                <fullName>Give as you Live</fullName>
+                <default>false</default>
+                <label>Give as you Live</label>
+            </value>
+            <value>
+                <fullName>Give Star</fullName>
+                <default>false</default>
+                <label>Give Star</label>
+            </value>
+            <value>
+                <fullName>Mailing House Suppression</fullName>
+                <default>false</default>
+                <label>Mailing House Suppression</label>
+            </value>
+            <value>
+                <fullName>Meta</fullName>
+                <default>false</default>
+                <label>Meta</label>
+            </value>
+            <value>
+                <fullName>Return Fundraising</fullName>
+                <default>false</default>
+                <label>Return Fundraising</label>
+            </value>
+            <value>
+                <fullName>The Big Give</fullName>
+                <default>false</default>
+                <label>The Big Give</label>
+            </value>
+            <value>
+                <fullName>Upward Comms</fullName>
+                <default>false</default>
+                <label>Upward Comms</label>
+            </value>
+            <value>
+                <fullName>Virgin Money</fullName>
+                <default>false</default>
+                <label>Virgin Money</label>
+            </value>
+            <value>
+                <fullName>Payroll Giving in Action</fullName>
+                <default>false</default>
+                <label>Payroll Giving in Action</label>
+            </value>
+            <value>
+                <fullName>GoodPaye</fullName>
+                <default>false</default>
+                <label>GoodPaye</label>
+            </value>
+            <value>
+                <fullName>Kindlink</fullName>
+                <default>false</default>
+                <label>Kindlink</label>
+            </value>
+            <value>
+                <fullName>Run for Charity</fullName>
+                <default>false</default>
+                <label>Run for Charity</label>
+            </value>
+            <value>
+                <fullName>Memory Giving</fullName>
+                <default>false</default>
+                <label>Memory Giving</label>
+            </value>
+            <value>
+                <fullName>Tiltify</fullName>
+                <default>false</default>
+                <label>Tiltify</label>
+            </value>
+            <value>
+                <fullName>PartnerPod</fullName>
+                <default>false</default>
+                <label>PartnerPod</label>
+            </value>
+            <value>
+                <fullName>Pennies</fullName>
+                <default>false</default>
+                <label>Pennies</label>
+            </value>
+            <value>
+                <fullName>Stewardship</fullName>
+                <default>false</default>
+                <label>Stewardship</label>
+            </value>
+            <value>
+                <fullName>Paypal Giving Fund</fullName>
+                <default>false</default>
+                <label>Paypal Giving Fund</label>
+            </value>
+            <value>
+                <fullName>CAF America</fullName>
+                <default>false</default>
+                <label>CAF America</label>
+            </value>
+            <value>
+                <fullName>Social Sync</fullName>
+                <default>false</default>
+                <label>Social Sync</label>
+            </value>
+            <value>
+                <fullName>Committed Giving</fullName>
+                <default>false</default>
+                <label>Committed Giving</label>
+            </value>
+            <value>
+                <fullName>Postal</fullName>
+                <default>false</default>
+                <label>Postal</label>
+            </value>
+            <value>
+                <fullName>Active Campaign</fullName>
+                <default>false</default>
+                <label>Active Campaign</label>
+            </value>
+            <value>
+                <fullName>Comms via digital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Comms via digital</label>
+            </value>
+            <value>
+                <fullName>Email from Marketing Cloud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Email from Marketing Cloud</label>
+            </value>
+            <value>
+                <fullName>Other Third Party</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Third Party</label>
+            </value>
+            <value>
+                <fullName>Third Party (JustGiving, third party, CAF, etc.)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Third Party (JustGiving, third party, CAF, etc.)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

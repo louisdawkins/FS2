@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fdff__Final_Payment_Reference__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The payment reference for this Gift Commitment Schedule.</description>
+    <externalId>false</externalId>
+    <formula>IF ( NOT ( ISBLANK ( fdff__Custom_Payment_Reference__c ) ) , fdff__Custom_Payment_Reference__c , fdff__Generated_Payment_Reference__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The payment reference for this Gift Commitment Schedule.</inlineHelpText>
+    <label>Final Payment Reference</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

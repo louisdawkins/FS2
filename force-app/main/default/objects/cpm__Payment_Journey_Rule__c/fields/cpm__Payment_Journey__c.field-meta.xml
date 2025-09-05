@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Payment_Journey__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Payment Journey</label>
+    <referenceTo>cpm__Payment_Journey__c</referenceTo>
+    <relationshipLabel>Payment Journey Rules</relationshipLabel>
+    <relationshipName>Payment_Journey_Rules</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

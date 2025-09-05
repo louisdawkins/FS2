@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>trailheadapp__All_Modules</fullName>
+    <columns>NAME</columns>
+    <columns>trailheadapp__Description__c</columns>
+    <columns>trailheadapp__Roles__c</columns>
+    <columns>trailheadapp__Level__c</columns>
+    <columns>trailheadapp__Total_Badges_In_Progress__c</columns>
+    <columns>trailheadapp__Total_Badges_Awarded__c</columns>
+    <columns>trailheadapp__Archived__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>trailheadapp__Type__c</field>
+        <operation>equals</operation>
+        <value>Module</value>
+    </filters>
+    <label>All Modules</label>
+</ListView>

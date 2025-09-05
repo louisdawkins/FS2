@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniStudioSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableOaEventInternalWrites>false</enableOaEventInternalWrites>
+    <enableOaEventNotifications>false</enableOaEventNotifications>
+    <enableOaForCore>false</enableOaForCore>
+    <enableOmniStudioMetadata>false</enableOmniStudioMetadata>
+</OmniStudioSettings>

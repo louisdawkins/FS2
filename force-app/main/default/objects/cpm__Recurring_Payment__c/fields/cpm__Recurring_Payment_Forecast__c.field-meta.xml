@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Recurring_Payment_Forecast__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>/*
+IF( OR( BLANKVALUE( End_Date__c ), NOT( OR(Next_Collection_Date__c &gt; End_Date__c, Next_Collection_Date__c &gt; DATEVALUE( &apos;12-31-&apos;&amp;TEXT(YEAR(TODAY())) ) ) ) ,
+IF( OR( BLANKVALUE( End_Date__c ), Next_Collection_Date__c &gt; DATEVALUE( &apos;12-31-&apos;&amp;TEXT( YEAR( TODAY() ) ) ) ),
+
+) 
+
+)
+*/
+TEXT( DATEVALUE( TEXT( YEAR( today() ) )&amp;&quot;-12-31&quot; ) - cpm__Next_Collection_Date__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The number of collectable days remaining in the current year.</inlineHelpText>
+    <label>Recurring Payment Forecast</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

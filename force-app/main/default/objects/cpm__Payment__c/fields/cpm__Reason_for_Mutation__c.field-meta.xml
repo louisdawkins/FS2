@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Reason_for_Mutation__c</fullName>
+    <deprecated>false</deprecated>
+    <description>If the payment is negative, the reason why should be listed here.</description>
+    <inlineHelpText>Why this payment is of a negative amount.</inlineHelpText>
+    <label>Reason for Mutation</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reversal</fullName>
+                <default>false</default>
+                <label>Reversal</label>
+            </value>
+            <value>
+                <fullName>Chargeback</fullName>
+                <default>false</default>
+                <label>Chargeback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

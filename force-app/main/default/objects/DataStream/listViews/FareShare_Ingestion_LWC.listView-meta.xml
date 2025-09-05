@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FareShare_Ingestion_LWC</fullName>
+    <columns>Name</columns>
+    <columns>DataConnectorType</columns>
+    <columns>TotalNumberOfRowsAdded</columns>
+    <columns>TotalRowsProcessed</columns>
+    <columns>StreamType</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Name</field>
+        <operation>contains</operation>
+        <value>File</value>
+    </filters>
+    <filters>
+        <field>DataConnectorType</field>
+        <operation>equals</operation>
+        <value>INGESTAPI</value>
+    </filters>
+    <label>FareShare Ingestion</label>
+</ListView>

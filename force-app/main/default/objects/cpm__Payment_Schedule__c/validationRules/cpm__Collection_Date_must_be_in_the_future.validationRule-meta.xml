@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Collection_Date_must_be_in_the_future</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( 
+  AND( 
+     NOT(ISPICKVAL( cpm__Status__c , &apos;Verified&apos;))
+   , NOT(ISPICKVAL( cpm__Status__c , &apos;Done&apos;))
+   , NOT(ISPICKVAL( cpm__Status__c , &apos;Pending Verification&apos;))
+   , OR(
+      ISPICKVAL( cpm__PaymentMethod__c, &apos;Direct Debit&apos;)
+      ,ISPICKVAL( cpm__PaymentMethod__c, &apos;Credit Transfer&apos;)
+    )
+   , OR(
+       ISPICKVAL( cpm__Payment_Processor__c, &apos;PaymentHub-CH-DD&apos;)
+     , ISPICKVAL( cpm__Payment_Processor__c, &apos;PaymentHub-LSV&apos;)
+     , ISPICKVAL( cpm__Payment_Processor__c, &apos;PaymentHub-BACS&apos;)
+   )
+   , NOT(ISNULL( cpm__Collection_Date__c ))
+   , NOT(ISCHANGED(cpm__Report_Summary__c))
+   , NOT(ISCHANGED(cpm__Total_Value__c))
+   , NOT(ISCHANGED(cpm__Nr_Of_Installments__c))
+   , cpm__Collection_Date__c &lt;= TODAY() 
+) , true, false )</errorConditionFormula>
+    <errorDisplayField>cpm__Collection_Date__c</errorDisplayField>
+    <errorMessage>Collection Date must be in the future</errorMessage>
+</ValidationRule>

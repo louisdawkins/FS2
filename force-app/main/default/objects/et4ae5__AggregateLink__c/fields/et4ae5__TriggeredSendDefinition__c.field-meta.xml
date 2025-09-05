@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__TriggeredSendDefinition__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Triggered Send</label>
+    <referenceTo>et4ae5__Automated_Send__c</referenceTo>
+    <relationshipLabel>Aggregate Link Level Details</relationshipLabel>
+    <relationshipName>Aggregate_Link_Level_Details</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

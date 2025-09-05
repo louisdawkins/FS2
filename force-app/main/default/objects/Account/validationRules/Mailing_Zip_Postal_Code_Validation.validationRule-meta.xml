@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailing_Zip_Postal_Code_Validation</fullName>
+    <active>true</active>
+    <description>Rule to ensure valid post codes are entered on UK Accounts.</description>
+    <errorConditionFormula>PersonMailingCountry = &quot;United Kingdom&quot; &amp;&amp;
+NOT(ISBLANK(PersonMailingPostalCode)) &amp;&amp;
+NOT(REGEX(PersonMailingPostalCode, 
+&quot;([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\\s?[0-9][A-Za-z]{2})&quot;))
+
+&amp;&amp; NOT( $Permission.Exclude_from_Validation )</errorConditionFormula>
+    <errorDisplayField>PersonMailingPostalCode</errorDisplayField>
+    <errorMessage>Please enter a valid Postal Code.</errorMessage>
+</ValidationRule>

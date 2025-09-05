@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Yearly_value__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Calculates the revenue per year based on the Amount * the Frequency.</description>
+    <formula>cpm__Amount__c * CASE(TEXT( cpm__Frequency__c ), &quot;One-time&quot;, 1, &quot;Monthly&quot;, 12, &quot;Quarterly&quot;, 4, &quot;Twice a year&quot;, 2, 1)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>How much the Recurring Payment creates in revenue each year.</inlineHelpText>
+    <label>Yearly value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

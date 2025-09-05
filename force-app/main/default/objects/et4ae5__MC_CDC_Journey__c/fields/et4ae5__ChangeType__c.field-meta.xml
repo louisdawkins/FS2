@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__ChangeType__c</fullName>
+    <deprecated>false</deprecated>
+    <description>should hold a value of Create, Update, or CreateOrUpdate</description>
+    <externalId>false</externalId>
+    <label>Change Type</label>
+    <length>25</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

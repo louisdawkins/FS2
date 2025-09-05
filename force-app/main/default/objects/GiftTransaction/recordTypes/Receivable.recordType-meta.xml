@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Receivable</fullName>
+    <active>true</active>
+    <label>Receivable</label>
+    <picklistValues>
+        <picklist>AcknowledgementStatus</picklist>
+        <values>
+            <fullName>Don%27t Send</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>To Be Sent</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Associated_Giving_Page__c</picklist>
+        <values>
+            <fullName>Coca Cola Xmas Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuller Lives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IG - Fuller Lives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IG - Fuller Lives Now</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KPMG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Let%27s Make a Meal of It</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>More than Meals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One-Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spring Appeal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Winter Appeal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Channel__c</picklist>
+        <values>
+            <fullName>Active Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benevity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAF America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAF GAYE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAF Online Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charities Trust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DONR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enthuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Face-to-Face</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Give As You Live</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Give Panel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Give Star</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GoodPaye</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hands On Payroll Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JustGiving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kindlink</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memory Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PartnerPod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PayPal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paypal Giving Fund</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll Giving in Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll_Giving_In_Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pennies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Return</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Run for Charity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Sync</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stewardship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sum Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Big Give</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tiltify</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UpwardComms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Virgin Money</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work For Good</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donation_made_as__c</picklist>
+        <values>
+            <fullName>Individual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part of a company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part of a group %2F association</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gift_Team__c</picklist>
+        <values>
+            <fullName>Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundraising</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_was_the_money_raised__c</picklist>
+        <values>
+            <fullName>An event%2Factivity organised by FareShare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>An event%2Factivity organised by another party eg London Marathon%2C Great North Run etc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Another type of fundraising activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My own organised activity%2Fevent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Income_Stream__c</picklist>
+        <values>
+            <fullName>Corporate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Major Donors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust %26 Grants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PaymentMethod</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ApplePay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Asset</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BACS Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BankTransfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Charity Voucher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Committed Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit%2Fdebit card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CreditCard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cryptocurrency</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enthuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Face-to-face</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GiftAid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In-Kind</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JustGiving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PayPal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll Giving</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recurring mandate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standing Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venmo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relation_to_person_donation_is_in_mem_of__c</picklist>
+        <values>
+            <fullName>Family</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Friend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully Refunded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpaid</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Written-Off</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>fdff__Payment_Method__c</picklist>
+        <values>
+            <fullName>BACS Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CreditCard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GiftAid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PayPal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>fdff__Payment_Processor__c</picklist>
+        <values>
+            <fullName>FinDock-GoCardless</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PaymentHub-GiftAid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PaymentHub-PayPal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PaymentHub-Stripe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>fdff__Target__c</picklist>
+        <values>
+            <fullName>FareShare GoCardless Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FareShare Stripe Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gather Stripe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Main</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Contact_Reason_Is_Required</fullName>
+    <active>true</active>
+    <description>Do Not Contact Reason Is Required if Do Not Contact checkbox is checked</description>
+    <errorConditionFormula>AND (Do_Not_Contact__pc, ISBLANK(TEXT(Do_Not_Contact_Reason__pc)))</errorConditionFormula>
+    <errorMessage>Please select a &apos;Do Not Contact Reason&apos; if the Do Not Contact checkbox is ticked.</errorMessage>
+</ValidationRule>

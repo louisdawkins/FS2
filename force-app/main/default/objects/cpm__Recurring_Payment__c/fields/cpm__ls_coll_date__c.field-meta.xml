@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__ls_coll_date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The last time this Recurring Payment was processed in a payment run and had a installment created.</description>
+    <inlineHelpText>The last date this Recurring Payment was included in a payment run.</inlineHelpText>
+    <label>Last Collection Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

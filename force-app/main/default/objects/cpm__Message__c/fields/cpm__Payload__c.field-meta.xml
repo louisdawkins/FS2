@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Payload__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Use this field to add, serialised, any payload you want for your handler to pick up.</inlineHelpText>
+    <label>Payload</label>
+    <length>130000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

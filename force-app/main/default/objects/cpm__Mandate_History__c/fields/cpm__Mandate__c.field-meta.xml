@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Mandate__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Mandate</label>
+    <referenceTo>cpm__Mandate__c</referenceTo>
+    <relationshipLabel>Mandate Histories</relationshipLabel>
+    <relationshipName>Mandate_Histories</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

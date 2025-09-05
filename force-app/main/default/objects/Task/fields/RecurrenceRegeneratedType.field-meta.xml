@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecurrenceRegeneratedType</fullName>
+    <inlineHelpText>Choose After Due Date or After Completion Date to repeat this task after the selected date.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

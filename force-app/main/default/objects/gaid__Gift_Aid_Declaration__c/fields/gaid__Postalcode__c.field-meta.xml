@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Postalcode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Postal code for UK resident, for non-UK resident, enter &quot;X&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Postal code for UK resident, for non-UK resident, enter &quot;X&quot;</inlineHelpText>
+    <label>Postal code</label>
+    <length>15</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

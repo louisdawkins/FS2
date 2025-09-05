@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__IBAN_with_direct_debit</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND( ISPICKVAL( cpm__Payment_Method__c , &quot;Direct Debit&quot;), 
+OR(  cpm__Payment_Profile__r.RecordType.DeveloperName == &quot;IBAN&quot;, cpm__Payment_Profile__r.RecordType.DeveloperName == &quot;Legacy_Bank_Account&quot; ) )</errorConditionFormula>
+    <errorDisplayField>cpm__Payment_Profile__c</errorDisplayField>
+    <errorMessage>A IBAN or bank account is required with payment method &quot;Direct Debit&quot;</errorMessage>
+</ValidationRule>

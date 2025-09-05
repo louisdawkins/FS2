@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Bank_Feed_Account__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The Bank Account record this authorization is for.</description>
+    <label>Bank Feed Account</label>
+    <referenceTo>cpm__Bank_Account__c</referenceTo>
+    <relationshipLabel>Bank Feed Authorization Accounts</relationshipLabel>
+    <relationshipName>Bank_Feed_Authorization_Accounts</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

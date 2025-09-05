@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_feedback__c</fullName>
+    <description>Feedback or notes related to the campaign&apos;s performance or effectiveness</description>
+    <inlineHelpText>Feedback or notes related to the campaign&apos;s performance or effectiveness</inlineHelpText>
+    <label>Campaign Feedback</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

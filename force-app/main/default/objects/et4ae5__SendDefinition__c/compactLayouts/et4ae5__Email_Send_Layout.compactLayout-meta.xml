@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__Email_Send_Layout</fullName>
+    <fields>et4ae5__EmailName__c</fields>
+    <fields>et4ae5__Created_Date_Time__c</fields>
+    <label>Email Send Layout</label>
+</CompactLayout>

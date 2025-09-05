@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CodeBuilder__Error_State_Info__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field will store any sort of error response that we get from the API service during the life-cycle of the workspace.</description>
+    <label>Error_State_Info</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

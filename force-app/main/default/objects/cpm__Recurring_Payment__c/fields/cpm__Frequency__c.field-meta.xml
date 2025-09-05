@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Frequency__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The billing cycle for this Recurring Payment. every billing cycle a installment is created to facilitate collection.</description>
+    <inlineHelpText>How often this Recurring Payment should be collected.</inlineHelpText>
+    <label>Frequency</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One-time</fullName>
+                <default>false</default>
+                <label>One-time</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+                <label>Quarterly</label>
+            </value>
+            <value>
+                <fullName>Twice a year</fullName>
+                <default>false</default>
+                <label>Twice a year</label>
+            </value>
+            <value>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+                <label>Yearly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

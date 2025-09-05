@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Extract JSON payload into multiple local variables</description>
+        <name>apxc_Unified_Individual</name>
+        <label>Extract Unified Individual</label>
+        <locationX>890</locationX>
+        <locationY>563</locationY>
+        <actionName>ExtractJSONValues</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Contact_does_not_Exists_in_NPC</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>inputJSONString</name>
+            <value>
+                <elementReference>text_CurrentPayloadValue</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>keysToExtract</name>
+            <value>
+                <stringValue>[{&quot;key&quot;:&quot;value1&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_NPC_Contact_Id__c&quot;,&quot;order&quot;:0},{&quot;key&quot;:&quot;value2&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_KQ_NPSP_Contact_Id__c&quot;,&quot;order&quot;:1},{&quot;key&quot;:&quot;value3&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_FirstName__c&quot;,&quot;order&quot;:2},{&quot;key&quot;:&quot;value4&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_LastName__c&quot;,&quot;order&quot;:3},{&quot;key&quot;:&quot;value5&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Email_Address__c&quot;,&quot;order&quot;:4},{&quot;key&quot;:&quot;value6&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Phone_Number__c&quot;,&quot;order&quot;:5},{&quot;key&quot;:&quot;value7&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Uni_NPC_Account_Id__c&quot;,&quot;order&quot;:6},{&quot;key&quot;:&quot;value8&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_NPSP_Account_Id__c&quot;,&quot;order&quot;:7},{&quot;key&quot;:&quot;value9&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_NPSP_Account_RecordType_Name__c&quot;,&quot;order&quot;:8},{&quot;key&quot;:&quot;value10&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Contact_RecordType_Name__c&quot;,&quot;order&quot;:9},{&quot;key&quot;:&quot;value11&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Account_Supplier_Status__c&quot;,&quot;order&quot;:10},{&quot;key&quot;:&quot;value12&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_NPSP_Account_Name__c&quot;,&quot;order&quot;:11},{&quot;key&quot;:&quot;value13&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_Last_Volunteer_Date__c&quot;,&quot;order&quot;:12},{&quot;key&quot;:&quot;value14&quot;,&quot;value&quot;:&quot;NPSP_To_NPC_Contacts__dlm_NPC_Account_RecordType_Name__c&quot;,&quot;order&quot;:13}]</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>ExtractJSONValues</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign JSON payload from data action to flow local variable</description>
+        <name>assignment_JSON_Payload</name>
+        <label>JSON Payload</label>
+        <locationX>889</locationX>
+        <locationY>400</locationY>
+        <assignmentItems>
+            <assignToReference>text_CurrentPayloadValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PayloadCurrentValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>apxc_Unified_Individual</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Contact_exists_in_NPC</name>
+        <label>Check Contact exists in NPC</label>
+        <locationX>890</locationX>
+        <locationY>1324</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_not_in_NPC</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>var_ContactID</leftValueReference>
+                <operator>IsBlank</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>var_ContactID</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>var_ContactID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Contacts_in_NPC_from_NPSP</targetReference>
+            </connector>
+            <label>Contact not in NPC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Accounts match between NPSP and NPC. Contact is present in NPSP but not present in NPC.
+value1=NPC Contact Id
+value2=NPSP Contact Id
+value7=NPC Account Id
+value8=NPSP Account Id</description>
+        <name>Contact_does_not_Exists_in_NPC</name>
+        <label>Contact does not Exists in NPC</label>
+        <locationX>880</locationX>
+        <locationY>761</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_does_not_exist_in_NPC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value1</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value2</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value1</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value2</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value8</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value8</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value7</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Individual.value7</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Get_Contact_Record</targetReference>
+            </connector>
+            <label>Contact does not exist in NPC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Run only for NPSP_To_NPC_Contacts Data Cloud Data Action</description>
+        <name>NPSP_To_NPC_Contacts_Data_Action_Check</name>
+        <label>NPSP_To_NPC_Contacts Data Action Check</label>
+        <locationX>875</locationX>
+        <locationY>193</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_NPSP_To_NPC_Contacts_Data_Action</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ActionDeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>NPSP_To_NPC_Contacts</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assignment_JSON_Payload</targetReference>
+            </connector>
+            <label>Is NPSP_To_NPC_Contacts Data Action</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_EmailAddress</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND({!formula_EmailAddressRegex}=TRUE, LEN({!apxc_Unified_Individual.value12})&lt;=80), 
+{!apxc_Unified_Individual.value12}, 
+&quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EmailAddressRegex</name>
+        <dataType>Boolean</dataType>
+        <expression>REGEX({!apxc_Unified_Individual.value5}, &quot;^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IndividualCity</name>
+        <dataType>String</dataType>
+        <expression>IF(
+LEN({!apxc_Unified_Individual.value9})&lt;=40, {!apxc_Unified_Individual.value9}, &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IndividualLastName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR({!apxc_Unified_Individual.value2}=&quot;&quot;,ISNULL({!apxc_Unified_Individual.value2})),
+&quot;FareShare Supporter&quot;,
+{!apxc_Unified_Individual.value2}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PhoneCouldNotMigrate</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!formula_PhoneNumber}=&apos;&apos;, {!apxc_Unified_Individual.value12}, &apos;&apos;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PhoneNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(LEN({!apxc_Unified_Individual.value12})=9,LEN({!apxc_Unified_Individual.value12})=11,LEN({!apxc_Unified_Individual.value12})=12), {!apxc_Unified_Individual.value12}, &apos;&apos;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Formula_Top90</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!apxc_Unified_Individual.value4}=&quot;TRUE&quot;, TRUE, FALSE)</expression>
+    </formulas>
+    <interviewLabel>Data Cloud - Supplier Account Contacts {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Data Cloud - Create Supplier Account Contacts in NPC from NPSP</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Contacts_in_NPC_from_NPSP</name>
+        <label>Create Contacts in NPC from NPSP</label>
+        <locationX>896</locationX>
+        <locationY>1565</locationY>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Email</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value5</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value3</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value4</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value6</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NPSP_Account_Salesforce_Id__c</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value8</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NPSP_Salesforce_Id__c</field>
+            <value>
+                <elementReference>apxc_Unified_Individual.value2</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Contact_Record</name>
+        <label>Get Contact Record</label>
+        <locationX>898</locationX>
+        <locationY>1118</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Contact_exists_in_NPC</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>NPSP_Salesforce_Id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>apxc_Unified_Individual.value1</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>var_ContactID</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>762</locationX>
+        <locationY>17</locationY>
+        <connector>
+            <targetReference>NPSP_To_NPC_Contacts_Data_Action_Check</targetReference>
+        </connector>
+        <flowRunAsUser>TriggeringUser</flowRunAsUser>
+        <object>DataObjectDataChgEvent</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>text_CurrentPayloadValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_ContactID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

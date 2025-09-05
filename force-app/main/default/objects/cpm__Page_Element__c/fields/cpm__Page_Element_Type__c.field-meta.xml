@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Page_Element_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Page Element Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Page</fullName>
+                <default>false</default>
+                <label>Page</label>
+            </value>
+            <value>
+                <fullName>Section</fullName>
+                <default>false</default>
+                <label>Section</label>
+            </value>
+            <value>
+                <fullName>Row</fullName>
+                <default>false</default>
+                <label>Row</label>
+            </value>
+            <value>
+                <fullName>Column</fullName>
+                <default>false</default>
+                <label>Column</label>
+            </value>
+            <value>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <label>Content</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

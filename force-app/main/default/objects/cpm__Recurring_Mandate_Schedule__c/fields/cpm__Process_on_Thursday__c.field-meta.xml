@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Process_on_Thursday__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Check if mandate schedule should be processed on Thursday.</inlineHelpText>
+    <label>Process on Thursday</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

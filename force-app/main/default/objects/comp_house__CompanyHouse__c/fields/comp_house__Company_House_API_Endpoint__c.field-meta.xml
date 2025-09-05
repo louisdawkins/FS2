@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>comp_house__Company_House_API_Endpoint__c</fullName>
+    <defaultValue>&quot;https://api.companieshouse.gov.uk&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <label>Company House API Endpoint</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

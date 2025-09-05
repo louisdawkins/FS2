@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Mandate_ID__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The final mandate reference, gives the custom reference if present, the auto generated one otherwise.</description>
+    <externalId>false</externalId>
+    <formula>BLANKVALUE(cpm__Custom_Reference__c, 
+
+IF( cpm__Payment_Processor__c  == &apos;PaymentHub-BACS&apos; , cpm__Prefix__c &amp;&quot;&quot;&amp; UPPER(CASESAFEID(Id)) , cpm__Prefix__c &amp;&quot;&quot;&amp; CASESAFEID(Id))
+
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The final mandate reference, gives the custom reference if present, the auto generated one otherwise.</inlineHelpText>
+    <label>Mandate ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

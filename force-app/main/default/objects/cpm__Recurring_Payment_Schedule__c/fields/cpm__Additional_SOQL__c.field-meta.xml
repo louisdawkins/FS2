@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Additional_SOQL__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Used directly, without any change or processing, into the Additional SOQL field of the generated Payment Schedule records. Refer to Payment Schedule documentation for more help on this field.</inlineHelpText>
+    <label>Additional SOQL</label>
+    <length>15000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__BIC_is_mandatory_for_non_NL_IBANS</fullName>
+    <active>false</active>
+    <errorConditionFormula>if ( 1 == 0 , true, false )</errorConditionFormula>
+    <errorDisplayField>cpm__BIC_Code__c</errorDisplayField>
+    <errorMessage>BIC is mandatory for IBANs</errorMessage>
+</ValidationRule>

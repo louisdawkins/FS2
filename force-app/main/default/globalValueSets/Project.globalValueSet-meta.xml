@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Coronation Food Project</fullName>
+        <default>false</default>
+        <label>Coronation Food Project</label>
+    </customValue>
+    <customValue>
+        <fullName>East Anglia</fullName>
+        <default>false</default>
+        <label>East Anglia</label>
+    </customValue>
+    <customValue>
+        <fullName>Employability</fullName>
+        <default>false</default>
+        <label>Employability</label>
+    </customValue>
+    <customValue>
+        <fullName>FLEX</fullName>
+        <default>false</default>
+        <label>FLEX</label>
+    </customValue>
+    <customValue>
+        <fullName>Food purchases</fullName>
+        <default>false</default>
+        <label>Food purchases</label>
+    </customValue>
+    <customValue>
+        <fullName>Merseyside</fullName>
+        <default>false</default>
+        <label>Merseyside</label>
+    </customValue>
+    <customValue>
+        <fullName>Network Partners</fullName>
+        <default>false</default>
+        <label>Network Partners</label>
+    </customValue>
+    <customValue>
+        <fullName>Regional Lorries</fullName>
+        <default>false</default>
+        <label>Regional Lorries</label>
+    </customValue>
+    <customValue>
+        <fullName>SLT</fullName>
+        <default>false</default>
+        <label>SLT</label>
+    </customValue>
+    <customValue>
+        <fullName>Southern Central</fullName>
+        <default>false</default>
+        <label>Southern Central</label>
+    </customValue>
+    <customValue>
+        <fullName>Surplus with Purpose</fullName>
+        <default>false</default>
+        <label>Surplus with Purpose</label>
+    </customValue>
+    <customValue>
+        <fullName>Systems Transformation</fullName>
+        <default>false</default>
+        <label>Systems Transformation</label>
+    </customValue>
+    <customValue>
+        <fullName>Transport</fullName>
+        <default>false</default>
+        <label>Transport</label>
+    </customValue>
+    <masterLabel>Project</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

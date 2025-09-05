@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <label>Subtype</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Individual Giving</fullName>
+                <default>false</default>
+                <label>Individual Giving</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Trusts and Grants</fullName>
+                <default>false</default>
+                <label>Trusts and Grants</label>
+            </value>
+            <value>
+                <fullName>Adrenaline</fullName>
+                <default>false</default>
+                <label>Adrenaline</label>
+            </value>
+            <value>
+                <fullName>Running</fullName>
+                <default>false</default>
+                <label>Running</label>
+            </value>
+            <value>
+                <fullName>Awards</fullName>
+                <default>false</default>
+                <label>Awards</label>
+            </value>
+            <value>
+                <fullName>Auctions</fullName>
+                <default>false</default>
+                <label>Auctions</label>
+            </value>
+            <value>
+                <fullName>Receptions</fullName>
+                <default>false</default>
+                <label>Receptions</label>
+            </value>
+            <value>
+                <fullName>Networking</fullName>
+                <default>false</default>
+                <label>Networking</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Event - Third Party</controllingFieldValue>
+            <valueName>Adrenaline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event - Third Party</controllingFieldValue>
+            <valueName>Running</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event - High Value</controllingFieldValue>
+            <valueName>Awards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event - High Value</controllingFieldValue>
+            <valueName>Auctions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event - High Value</controllingFieldValue>
+            <valueName>Receptions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Event - High Value</controllingFieldValue>
+            <valueName>Networking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <valueName>Individual Giving</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <valueName>Corporate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Appeal</controllingFieldValue>
+            <valueName>Trusts and Grants</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

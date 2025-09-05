@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__End_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>End date of the period that mandate schedule records will be generated for. Mandate schedule records will be generated with a processing date until the end date, but not after the end date.</inlineHelpText>
+    <label>End Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

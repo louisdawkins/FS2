@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Exclude_from_Auto_Run__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <inlineHelpText>If you are creating a schedule that you want to run manually by changing the schedule status, please select this option. If Auto Run is enabled in the FinDock Setup, this schedule will otherwise be run automatically.</inlineHelpText>
+    <label>Exclude from Auto-Run</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

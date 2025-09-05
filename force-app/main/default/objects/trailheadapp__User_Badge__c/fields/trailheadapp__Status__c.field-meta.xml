@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>trailheadapp__Status__c</fullName>
+    <defaultValue>&quot;Assigned&quot;</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Three types of status, &quot;Assigned&quot;, &quot;In Progress&quot;, or &quot;Completed&quot; are available to represent the status of a user&apos;s badge. While we always expect a value, this is not a required field to enable FLS for badge assigners.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Three types of status, &quot;Assigned&quot;, &quot;In Progress&quot;, or &quot;Completed&quot; are available to represent the status of a user&apos;s badge</inlineHelpText>
+    <label>Status</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

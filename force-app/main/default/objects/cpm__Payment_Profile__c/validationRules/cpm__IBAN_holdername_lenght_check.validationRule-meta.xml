@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__IBAN_holdername_lenght_check</fullName>
+    <active>true</active>
+    <description>IBAN holder names can&apos;t be larger than 140 characters</description>
+    <errorConditionFormula>IF ( AND ( $RecordType.Name = &quot;IBAN&quot;, LEN(cpm__Holder_Name__c) &gt; 140 ) , true ,false)</errorConditionFormula>
+    <errorDisplayField>cpm__Holder_Name__c</errorDisplayField>
+    <errorMessage>Holder name can&apos;t contain more than 140 characters</errorMessage>
+</ValidationRule>

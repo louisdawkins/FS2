@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Run_Days_Before_Collection_Date_SEPA</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+    AND(
+        OR (
+            ISPICKVAL( cpm__Payment_Method__c, &apos;Direct Debit&apos;),
+            ISPICKVAL( cpm__Payment_Method__c, &apos;Credit Transfer&apos;)
+        ),
+        OR(
+            ISPICKVAL( cpm__Payment_Processor__c, &apos;PaymentHub-SEPA&apos;),
+            ISPICKVAL( cpm__Payment_Processor__c, &apos;DummyExtension-PSP&apos;)
+        ),
+        NOT(ISNULL( cpm__Run_of_Days_before_Collection_date__c )),
+        cpm__Run_of_Days_before_Collection_date__c &lt; 0
+    ), 
+    true, 
+    false 
+)</errorConditionFormula>
+    <errorMessage>Run # of Business Days before Coll. Date must be 0 or higher</errorMessage>
+</ValidationRule>

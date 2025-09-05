@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Date, Report Date, Report Type and Status.</description>
+        <name>Set_Values</name>
+        <label>Set Values</label>
+        <locationX>176</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.cpm__Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.cpm__Report_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fxReportDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.cpm__Report_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>PaymentIntent</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.cpm__Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.cpm__Campaign__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Payroll_Giving_Campaign.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>fxDate</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+ISBLANK({!$Record.cpm__Date__c}),
+DATE(
+YEAR({!$Flow.CurrentDate}),
+MONTH({!$Flow.CurrentDate})-1,
+15
+)
+,
+{!$Record.cpm__Date__c}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fxReportDate</name>
+        <dataType>Date</dataType>
+        <expression>IF(
+ISBLANK({!$Record.cpm__Report_Date__c}),
+DATE(
+YEAR({!$Flow.CurrentDate}),
+MONTH({!$Flow.CurrentDate})-1,
+15
+)
+,
+{!$Record.cpm__Report_Date__c}
+)</expression>
+    </formulas>
+    <interviewLabel>Inbound report - Set Charities Trust Values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Inbound report - Set Charities Trust Values</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Payroll_Giving_Campaign</name>
+        <label>Get Payroll Giving Campaign</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payroll Giving</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Campaign</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Payroll_Giving_Campaign</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>cpm__Report_SubType__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Charities Trust</stringValue>
+            </value>
+        </filters>
+        <object>cpm__Inbound_Report__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

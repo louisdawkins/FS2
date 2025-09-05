@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acknowledgement_Status__c</fullName>
+    <inlineHelpText>Tracks the status of thank-you communications sent to donors for their contributions.
+
+To be sent: Acknowledgement has not yet been sent to the donor.
+Sent: A thank-you message or formal acknowledgement has been sent to the donor.
+Don&apos;t Send: Acknowledgement will not be sent</inlineHelpText>
+    <label>Acknowledgement Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To be Sent</fullName>
+                <default>true</default>
+                <label>To be Sent</label>
+            </value>
+            <value>
+                <fullName>Sent</fullName>
+                <default>false</default>
+                <label>Sent</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t Send</fullName>
+                <default>false</default>
+                <label>Don&apos;t Send</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

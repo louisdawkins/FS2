@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>proh__Send_Generation_Request</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Send Generation Request</masterLabel>
+    <openType>sidebar</openType>
+    <page>proh__MandateScheduleStartGeneration</page>
+    <protected>false</protected>
+</WebLink>

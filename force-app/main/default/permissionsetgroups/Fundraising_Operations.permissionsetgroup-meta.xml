@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Fundraising Operations</label>
+    <permissionSets>API_Access</permissionSets>
+    <permissionSets>Consent_Preferences_UI</permissionSets>
+    <permissionSets>Datacloud_file_upload</permissionSets>
+    <permissionSets>Delete_Account</permissionSets>
+    <permissionSets>FS_Standard_permissions</permissionSets>
+    <permissionSets>FinDock_Additional_Setup</permissionSets>
+    <permissionSets>Fundraising_Ops</permissionSets>
+    <permissionSets>cpm__PaymentHub_All_FLS</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

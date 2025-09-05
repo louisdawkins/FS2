@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Home_Phone_Length_Validation</fullName>
+    <active>true</active>
+    <description>Rule to ensure phone number is valid.</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK( PersonHomePhone )),
+    NOT(OR(
+        LEN(PersonHomePhone) = 12,
+        LEN(PersonHomePhone) = 11,
+        LEN(PersonHomePhone) = 9
+    ))
+)
+
+&amp;&amp; NOT( $Permission.Exclude_from_Validation )</errorConditionFormula>
+    <errorDisplayField>PersonHomePhone</errorDisplayField>
+    <errorMessage>Please enter a valid Phone number.</errorMessage>
+</ValidationRule>

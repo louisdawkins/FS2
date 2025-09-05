@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>JustGiving</fullName>
+        <default>false</default>
+        <label>JustGiving</label>
+    </customValue>
+    <customValue>
+        <fullName>Payroll</fullName>
+        <default>false</default>
+        <label>Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>Face-to-Face</fullName>
+        <default>false</default>
+        <label>Face-to-Face</label>
+    </customValue>
+    <customValue>
+        <fullName>DONR</fullName>
+        <default>false</default>
+        <label>DONR</label>
+    </customValue>
+    <customValue>
+        <fullName>Committed Giving</fullName>
+        <default>false</default>
+        <label>Committed Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Sync</fullName>
+        <default>false</default>
+        <label>Social Sync</label>
+    </customValue>
+    <customValue>
+        <fullName>UpwardComms</fullName>
+        <default>false</default>
+        <label>UpwardComms</label>
+    </customValue>
+    <customValue>
+        <fullName>Return</fullName>
+        <default>false</default>
+        <label>Return</label>
+    </customValue>
+    <customValue>
+        <fullName>Meta</fullName>
+        <default>false</default>
+        <label>Meta</label>
+    </customValue>
+    <customValue>
+        <fullName>Active Campaign</fullName>
+        <default>false</default>
+        <label>Active Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Benevity</fullName>
+        <default>false</default>
+        <label>Benevity</label>
+    </customValue>
+    <customValue>
+        <fullName>CAF GAYE</fullName>
+        <default>false</default>
+        <label>CAF GAYE</label>
+    </customValue>
+    <customValue>
+        <fullName>CAF Online Direct</fullName>
+        <default>false</default>
+        <label>CAF Online Direct</label>
+    </customValue>
+    <customValue>
+        <fullName>Charities Trust</fullName>
+        <default>false</default>
+        <label>Charities Trust</label>
+    </customValue>
+    <customValue>
+        <fullName>Enthuse</fullName>
+        <default>false</default>
+        <label>Enthuse</label>
+    </customValue>
+    <customValue>
+        <fullName>Give As You Live</fullName>
+        <default>false</default>
+        <label>Give As You Live</label>
+    </customValue>
+    <customValue>
+        <fullName>Give Panel</fullName>
+        <default>false</default>
+        <label>Give Panel</label>
+    </customValue>
+    <customValue>
+        <fullName>Give Star</fullName>
+        <default>false</default>
+        <label>Give Star</label>
+    </customValue>
+    <customValue>
+        <fullName>PayPal</fullName>
+        <default>false</default>
+        <label>PayPal</label>
+    </customValue>
+    <customValue>
+        <fullName>Payroll_Giving_In_Action</fullName>
+        <default>false</default>
+        <label>Payroll_Giving_In_Action</label>
+    </customValue>
+    <customValue>
+        <fullName>Stewardship</fullName>
+        <default>false</default>
+        <label>Stewardship</label>
+    </customValue>
+    <customValue>
+        <fullName>Sum Up</fullName>
+        <default>false</default>
+        <label>Sum Up</label>
+    </customValue>
+    <customValue>
+        <fullName>The Big Give</fullName>
+        <default>false</default>
+        <label>The Big Give</label>
+    </customValue>
+    <customValue>
+        <fullName>Virgin Money</fullName>
+        <default>false</default>
+        <label>Virgin Money</label>
+    </customValue>
+    <customValue>
+        <fullName>Work For Good</fullName>
+        <default>false</default>
+        <label>Work For Good</label>
+    </customValue>
+    <customValue>
+        <fullName>GoodPaye</fullName>
+        <default>false</default>
+        <label>GoodPaye</label>
+    </customValue>
+    <customValue>
+        <fullName>Hands On Payroll Giving</fullName>
+        <default>false</default>
+        <label>Hands On Payroll Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Kindlink</fullName>
+        <default>false</default>
+        <label>Kindlink</label>
+    </customValue>
+    <customValue>
+        <fullName>Payroll Giving in Action</fullName>
+        <default>false</default>
+        <label>Payroll Giving in Action</label>
+    </customValue>
+    <customValue>
+        <fullName>Run for Charity</fullName>
+        <default>false</default>
+        <label>Run for Charity</label>
+    </customValue>
+    <customValue>
+        <fullName>Memory Giving</fullName>
+        <default>false</default>
+        <label>Memory Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Tiltify</fullName>
+        <default>false</default>
+        <label>Tiltify</label>
+    </customValue>
+    <customValue>
+        <fullName>PartnerPod</fullName>
+        <default>false</default>
+        <label>PartnerPod</label>
+    </customValue>
+    <customValue>
+        <fullName>Pennies</fullName>
+        <default>false</default>
+        <label>Pennies</label>
+    </customValue>
+    <customValue>
+        <fullName>Paypal Giving Fund</fullName>
+        <default>false</default>
+        <label>Paypal Giving Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>CAF America</fullName>
+        <default>false</default>
+        <label>CAF America</label>
+    </customValue>
+    <masterLabel>Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

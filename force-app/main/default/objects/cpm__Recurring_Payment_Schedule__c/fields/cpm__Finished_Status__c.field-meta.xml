@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Finished_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>Used directly, without any change or processing, into the Finished Status field of the generated Payment Schedule records. Refer to Payment Schedule documentation for more help on this field.</inlineHelpText>
+    <label>Finished Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-- Provided by Sys Admin --</fullName>
+                <default>false</default>
+                <label>-- Provided by Sys Admin --</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

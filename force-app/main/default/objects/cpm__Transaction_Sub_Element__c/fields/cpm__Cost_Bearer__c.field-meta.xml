@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Cost_Bearer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <label>Cost Bearer</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Transaction Sub Elements</relationshipLabel>
+    <relationshipName>Transaction_Sub_Elements</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

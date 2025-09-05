@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Child_Set_Date_Age</name>
+        <label>Child Set Date Age</label>
+        <locationX>182</locationX>
+        <locationY>252</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>X6_years_old</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ChildSetDateAge</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Age_Range</targetReference>
+            </connector>
+            <label>6 years old</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ChildSetDateAge</name>
+        <dataType>Boolean</dataType>
+        <expression>if(TODAY() - {!$Record.Child_Set_Date__pc} &gt; 2191, True, False)</expression>
+    </formulas>
+    <interviewLabel>Update Age Range {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>sch Contact - Update Age Range</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Age_Range</name>
+        <label>Update Age Range</label>
+        <locationX>50</locationX>
+        <locationY>360</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Age_Range__pc</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Child</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Age_Range__pc</field>
+            <value>
+                <stringValue>Adult</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Child_Set_Date_Age</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Age_Range__pc</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Child</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2024-04-16</startDate>
+            <startTime>05:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

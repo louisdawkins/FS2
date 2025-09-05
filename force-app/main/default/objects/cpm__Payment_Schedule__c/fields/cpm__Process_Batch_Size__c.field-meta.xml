@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Process_Batch_Size__c</fullName>
+    <defaultValue>200</defaultValue>
+    <deprecated>false</deprecated>
+    <description>This field is for payment schedules that are used to create payment refrences for pay slips. If your org has record creation limits for batch jobs, set the payment schedule limit here for installment generation job. If unsure, leave this field with the default value.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is for payment schedules that are used to create payment refrences for pay slips. If your org has record creation limits for batch jobs, set the payment schedule limit here for installment generation job. If unsure, leave this field with the default value.</inlineHelpText>
+    <label>Process Batch Size</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

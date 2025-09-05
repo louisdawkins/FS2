@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Frequency_is_required</fullName>
+    <active>true</active>
+    <description>Frequency is a required field on all commitments.</description>
+    <errorConditionFormula>ISPICKVAL(cpm__Frequency__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>cpm__Frequency__c</errorDisplayField>
+    <errorMessage>Frequency is a required field.</errorMessage>
+</ValidationRule>

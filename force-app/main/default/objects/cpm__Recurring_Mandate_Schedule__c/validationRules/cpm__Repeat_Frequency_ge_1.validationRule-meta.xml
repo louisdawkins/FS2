@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Repeat_Frequency_ge_1</fullName>
+    <active>true</active>
+    <errorConditionFormula>cpm__Repeat_Frequency__c &lt; 1</errorConditionFormula>
+    <errorMessage>Repeat Frequency must be 1 or higher</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__IBAN__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The IBAN as stated on the payment profile.</description>
+    <externalId>false</externalId>
+    <formula>IF ( NOT ( ISBLANK ( cpm__Custom_IBAN__c ) ) , cpm__Custom_IBAN__c , 
+  IF ( cpm__Payment_Profile__r.RecordType.DeveloperName == &apos;IBAN&apos; , cpm__Payment_Profile__r.cpm__IBAN__c , 
+    IF ( cpm__Payment_Profile__r.RecordType.DeveloperName == &apos;Credit_Card&apos;,  cpm__Mandate__r.cpm__Reference__c, cpm__Payment_Profile__r.cpm__Bank_Account__c )
+  )
+)</formula>
+    <inlineHelpText>The IBAN as stated on the payment profile.</inlineHelpText>
+    <label>Account Number</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

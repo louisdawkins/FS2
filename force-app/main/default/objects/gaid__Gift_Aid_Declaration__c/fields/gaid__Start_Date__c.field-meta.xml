@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Start_Date__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Date when declaration can start being used to claim Gift Aid. Leave empty if declaration can be used for past donations.</description>
+    <inlineHelpText>Date when declaration can start being used to claim Gift Aid. Leave empty if declaration can be used for past donations.</inlineHelpText>
+    <label>Start Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

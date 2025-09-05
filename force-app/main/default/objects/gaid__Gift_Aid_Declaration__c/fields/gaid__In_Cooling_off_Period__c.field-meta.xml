@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__In_Cooling_off_Period__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Formula field indicating if the declaration is cooling off today.</description>
+    <formula>IF(ISBLANK(gaid__Cooling_Off_Period_End_Date__c), false, gaid__Cooling_Off_Period_End_Date__c &gt;= TODAY())</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula field indicating if the declaration is cooling off today.</inlineHelpText>
+    <label>In Cooling Off Period</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

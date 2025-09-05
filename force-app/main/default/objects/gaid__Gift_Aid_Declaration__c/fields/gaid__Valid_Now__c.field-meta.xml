@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Valid_Now__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Formula field that calculates of the declaration is valid today.</description>
+    <formula>IF ( 
+        AND ( 
+            gaid__Active__c, 
+            NOT(gaid__In_Cooling_off_Period__c), 
+            OR(ISBLANK(gaid__Start_Date__c), gaid__Start_Date__c &lt;= TODAY()),
+            OR(ISBLANK(gaid__End_Date__c), gaid__End_Date__c &gt;= TODAY())), 
+        true, 
+        false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Formula field that calculates of the declaration is valid today.</inlineHelpText>
+    <label>Valid Now</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

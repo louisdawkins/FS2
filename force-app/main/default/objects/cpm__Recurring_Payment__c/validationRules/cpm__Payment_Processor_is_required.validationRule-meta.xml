@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Payment_Processor_is_required</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF ( ISBLANK ( TEXT(cpm__Payment_Processor__c) ) , true , false )</errorConditionFormula>
+    <errorDisplayField>cpm__Payment_Processor__c</errorDisplayField>
+    <errorMessage>Payment Processor is a required field</errorMessage>
+</ValidationRule>

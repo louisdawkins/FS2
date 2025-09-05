@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CodeBuilder__Last_Accessed__c</fullName>
+    <deprecated>false</deprecated>
+    <description>the last time the workspace was accessed.</description>
+    <label>Last Accessed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

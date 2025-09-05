@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>nilesh@solutionjunkies.co.uk</contactEmail>
+    <label>Data Cloud External Auth</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oauth2
+https://fareshare2--sjdev.sandbox.my.salesforce.com/services/oauth2
+https://fareshare2--staging.sandbox.my.salesforce.com/services/oauth2</callbackUrl>
+        <certificate>MIIDtTCCAp2gAwIBAgIUXqAs4YjbpOd6w9g41JlXIYweRiswDQYJKoZIhvcNAQELBQAwgYIxCzAJBgNVBAYTAlVTMRAwDgYDVQQIDAdHZW9yZ2lhMRMwEQYDVQQHDApBbHBoYXJldHRhMRMwEQYDVQQKDApBcGV4IEhvdXJzMQswCQYDVQQLDAJBSDEqMCgGCSqGSIb3DQEJARYbYW1pdC5zYWxlc2ZvcmNlMjFAZ21haWwuY29tMB4XDTI0MDgyMDA5NTQyMFoXDTI1MDgyMDA5NTQyMFowgYIxCzAJBgNVBAYTAlVTMRAwDgYDVQQIDAdHZW9yZ2lhMRMwEQYDVQQHDApBbHBoYXJldHRhMRMwEQYDVQQKDApBcGV4IEhvdXJzMQswCQYDVQQLDAJBSDEqMCgGCSqGSIb3DQEJARYbYW1pdC5zYWxlc2ZvcmNlMjFAZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2gLHwNhiH6CRGBOhUoVIrpKtrZUXROhwcUZI19jP6VE/6giSlx5xbVbqgRaQckF69/rHZxTnNvDKAFg0Cv4xx9KvMduVzsdzAqxvwCa5csljQ3dtrmr7e4UkSS6mmvRTXZWrM/76Hi0M0RDzFAFelm6lqv4WDerTwIBMdRjSnA441x9X3H39TotX2/SPdSwCO1nZmwcATFo49NXJcUQdyhE+Uj8gLlDIKEP2wgji6gQzKW0IITV+uxjNH9AUPIH695BUJPXbvAqYgP1B07i8EXrBKYMl8kzSwISpMtj8RteGc09KNSYIlD5ofCnJKGf1j2PSI/DWFOIEz0xoFofVTwIDAQABoyEwHzAdBgNVHQ4EFgQUCPgjCutgWlDuZAlXp3GDraxewz4wDQYJKoZIhvcNAQELBQADggEBALhHsY1n5MCp1UaXSSvvh0fTuiXHZKgZpXOUi7Spw02QkJiiPzNeJljv4owfD/6aeTs3VpIog/0Tpdrk/u9WowUwJXvNURAaRPPaKdjMdcP1nm7+C6IFKTnaulE/YklEZG+lDz82nV6/ol9uINlKefAccEed0f692pVdTm1X9hK6XZISceZxbS5pVG0iMFTCk2KEaMPskAEKBczovmwERfFaBNdwN9kIpW9mQAUZsR4ahuQBfxfpp2Ci2ikc/GJJYVXDYm6T1PqK/fYju6nDcgzrq4WfoYMdnfEBSfI0J6hYktO+hFkU6Hw7qsvFVMoHfehqzqWiLlAzgbc28nDnPDo=</certificate>
+        <consumerKey>3MVG9DREgiBqN9WlajmwAW7lCvxqmN_IcU4l8HOgNn3tF_dYvwgxSoXz6eP5sMFHLCHAP61J9JMh0daosrERx</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>true</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isRefreshTokenRotationEnabled>false</isRefreshTokenRotationEnabled>
+        <isSecretRequiredForRefreshToken>true</isSecretRequiredForRefreshToken>
+        <isSecretRequiredForTokenExchange>false</isSecretRequiredForTokenExchange>
+        <isTokenExchangeEnabled>false</isTokenExchangeEnabled>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>CDPIngest</scopes>
+        <scopes>CDPProfile</scopes>
+        <scopes>CDPQuery</scopes>
+        <scopes>CDPSegment</scopes>
+        <scopes>CDPIdentityResolution</scopes>
+        <scopes>CDPCalculatedInsight</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <isTokenExchangeFlowEnabled>false</isTokenExchangeFlowEnabled>
+        <refreshTokenPolicy>specific_lifetime:90:DAYS</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+    <sessionPolicy>
+        <sessionTimeout>1440</sessionTimeout>
+    </sessionPolicy>
+</ConnectedApp>

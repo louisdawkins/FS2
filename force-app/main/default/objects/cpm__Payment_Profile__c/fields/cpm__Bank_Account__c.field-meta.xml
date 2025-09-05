@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Bank_Account__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Pre-SEPA bank accounts. doesn&apos;t have the IBAN validation check.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>non IBAN bank account number. doesn&apos;t have the IBAN validation check.</inlineHelpText>
+    <label>Bank Account</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

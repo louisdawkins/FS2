@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>FinDock Administrator</label>
+    <permissionSets>FinDock_Additional_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Bank_Feed_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Base</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Delete</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Guided_Matching_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Mandate_Schedule_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Payment_Request_Generation_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Payment_Schedule_Setup</permissionSets>
+    <permissionSets>cpm__FinDock_Core_Setup</permissionSets>
+    <permissionSets>cpm__Pages</permissionSets>
+    <permissionSets>fdff__FinDock_for_Fundraising_Base</permissionSets>
+    <permissionSets>fdff__FinDock_for_Fundraising_Setup</permissionSets>
+    <permissionSets>gaid__FinDock_GiftAid_Base</permissionSets>
+    <permissionSets>gaid__FinDock_GiftAid_Setup</permissionSets>
+    <permissionSets>gcf__FinDock_GoCardless_Base</permissionSets>
+    <permissionSets>gcf__FinDock_GoCardless_Setup</permissionSets>
+    <permissionSets>phstr__FinDock_Stripe_Base</permissionSets>
+    <permissionSets>phstr__FinDock_Stripe_Setup</permissionSets>
+    <permissionSets>proh__FinDock_ProcessingHub_Base</permissionSets>
+    <permissionSets>proh__FinDock_ProcessingHub_Setup</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

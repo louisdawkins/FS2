@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Update_Finance_Code</name>
+        <label>Update Finance Code</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1430.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Finance_Code_2</name>
+        <label>Update Finance Code</label>
+        <locationX>314</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1400.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Finance_Code_3</name>
+        <label>Update Finance Code</label>
+        <locationX>578</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1410.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Update_Finance_Code_4</name>
+        <label>Update Finance Code</label>
+        <locationX>842</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>FinanceCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Finance_Code_P1430_2.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>How_was_the_money_raised</name>
+        <label>How was the money raised?</label>
+        <locationX>578</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Update_Finance_Code_on_Gift_Transaction</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>My_own_organised_activity_event</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.How_was_the_money_raised__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>My own organised activity/event</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1430</targetReference>
+            </connector>
+            <label>My own organised activity/event</label>
+        </rules>
+        <rules>
+            <name>An_event_activity_organised_by_FareShare</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.How_was_the_money_raised__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>An event/activity organised by FareShare</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1400</targetReference>
+            </connector>
+            <label>An event/activity organised by FareShare</label>
+        </rules>
+        <rules>
+            <name>An_event_activity_organised_by_another_party</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.How_was_the_money_raised__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>An event/activity organised by another party eg London Marathon, Great North Run etc</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1410</targetReference>
+            </connector>
+            <label>An event/activity organised by another party</label>
+        </rules>
+        <rules>
+            <name>Another_type_of_fundraising_activity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.How_was_the_money_raised__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Another type of fundraising activity</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Finance_Code_P1430_2</targetReference>
+            </connector>
+            <label>Another type of fundraising activity</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>rtb Gift Transaction - {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>rtb Gift Transaction - update Finance Code according to information from Mass Giving Page</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Finance_Code_P1400</name>
+        <label>Get Finance Code P1400</label>
+        <locationX>314</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code_2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1400 - FS Owned Campaigns Income</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Finance_Code_P1410</name>
+        <label>Get Finance Code P1410</label>
+        <locationX>578</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code_3</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1410 - Third Party Events-Reactive Income</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Finance_Code_P1430</name>
+        <label>Get Finance Code P1430</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1430 - Community Fundraising - Reactive Income</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Finance_Code_P1430_2</name>
+        <label>Get Finance Code P1430</label>
+        <locationX>842</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Finance_Code_4</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>P1430 - Community Fundraising - Reactive Income</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Finance_Codes__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Finance_Code_on_Gift_Transaction</name>
+        <label>Update Finance Code on Gift Transaction</label>
+        <locationX>578</locationX>
+        <locationY>695</locationY>
+        <inputAssignments>
+            <field>Finance_Code__c</field>
+            <value>
+                <elementReference>FinanceCode</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>How_was_the_money_raised</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>How_was_the_money_raised__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>GiftTransaction</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>FinanceCode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

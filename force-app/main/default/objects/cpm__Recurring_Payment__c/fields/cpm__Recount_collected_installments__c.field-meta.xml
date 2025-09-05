@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Recount_collected_installments__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Checking this checkbox manually triggers a recount of the number of collected installments field.</description>
+    <inlineHelpText>Checking this checkbox manually triggers a recount of the number of collected installments field.</inlineHelpText>
+    <label>Recount collected installments</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

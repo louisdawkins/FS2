@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>Form_FirstName</name>
+        <dataType>String</dataType>
+        <expression>IF(FIND(&quot; &quot;,{!$Record.FirstName})&gt;0, UPPER(LEFT({!$Record.FirstName},1))+ MID(LOWER({!$Record.FirstName}), 2, FIND(&quot; &quot;,{!$Record.FirstName})-1)+ &quot; &quot; + UPPER(MID({!$Record.FirstName}, FIND(&quot; &quot;,{!$Record.FirstName})+1, 1))+ LOWER(MID({!$Record.FirstName}, FIND(&quot; &quot;,{!$Record.FirstName})+2, Len({!$Record.FirstName})-FIND(&quot; &quot;,{!$Record.FirstName})+2)) ,UPPER(LEFT({!$Record.FirstName},1))&amp;Mid(LOWER({!$Record.FirstName}), 2, Len({!$Record.FirstName})-1))</expression>
+    </formulas>
+    <formulas>
+        <name>Form_LastName</name>
+        <dataType>String</dataType>
+        <expression>IF(FIND(&quot; &quot;,{!$Record.LastName})&gt;0, UPPER(LEFT({!$Record.LastName},1))+ MID(LOWER({!$Record.LastName}), 2, FIND(&quot; &quot;,{!$Record.LastName})-1)+ &quot; &quot; + UPPER(MID({!$Record.LastName}, FIND(&quot; &quot;,{!$Record.LastName})+1, 1))+ LOWER(MID({!$Record.LastName}, FIND(&quot; &quot;,{!$Record.LastName})+2, Len({!$Record.LastName})-FIND(&quot; &quot;,{!$Record.LastName})+2)) ,UPPER(LEFT({!$Record.LastName},1))&amp;Mid(LOWER({!$Record.LastName}), 2, Len({!$Record.LastName})-1))</expression>
+    </formulas>
+    <interviewLabel>Account Name Standardisation Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Name Standardisation Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Account_With_Standardised_Names</name>
+        <label>Update Account With Standardised Names</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>FirstName</field>
+            <value>
+                <elementReference>Form_FirstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LastName</field>
+            <value>
+                <elementReference>Form_LastName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Account_With_Standardised_Names</targetReference>
+        </connector>
+        <filterFormula>OR({!$Record.FirstName} !=UPPER({!$Record.FirstName}),{!$Record.LastName} !=UPPER({!$Record.LastName}))</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

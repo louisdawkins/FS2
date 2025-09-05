@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Regional_Centre_RC_volunteer_date__c</fullName>
+    <inlineHelpText>This information is only collected for RC volunteers. For TFC volunteers this value will always be null.</inlineHelpText>
+    <label>Last Regional Centre (RC) volunteer date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

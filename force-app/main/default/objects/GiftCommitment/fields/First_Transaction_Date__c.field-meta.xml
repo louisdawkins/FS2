@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Transaction_Date__c</fullName>
+    <description>This is the first transaction date after set up accounting for 5 days of mandate set up</description>
+    <inlineHelpText>This is the first transaction date after set up accounting for 5 days of mandate set up</inlineHelpText>
+    <label>First Transaction Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

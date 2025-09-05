@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>movedata__All</fullName>
+    <columns>DeveloperName</columns>
+    <columns>MasterLabel</columns>
+    <columns>movedata__Type__c</columns>
+    <columns>movedata__Order__c</columns>
+    <columns>movedata__Handler__c</columns>
+    <columns>movedata__Disabled__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Metadata</label>
+</ListView>

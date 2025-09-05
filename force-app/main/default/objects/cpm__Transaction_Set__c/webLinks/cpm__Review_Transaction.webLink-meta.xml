@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Review_Transaction</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Review Transaction</masterLabel>
+    <openType>sidebar</openType>
+    <page>cpm__ReviewTransactions</page>
+    <protected>false</protected>
+</WebLink>

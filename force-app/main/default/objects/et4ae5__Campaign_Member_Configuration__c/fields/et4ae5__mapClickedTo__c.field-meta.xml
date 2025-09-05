@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__mapClickedTo__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This is the value that will appear in status or activity when a clicked event occurs.</description>
+    <externalId>false</externalId>
+    <label>mapClickedTo</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

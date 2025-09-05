@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Finished_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This field is for using the payment schedule to create references for payslips (e.g. Acceptgiro, ESR, etc. payment methods). The Finished Status indicates in your org that the generated installments are ready for collection using your payslip process.</description>
+    <inlineHelpText>This field is for using the payment schedule to create references for payslips (e.g. Acceptgiro, ESR, etc. payment methods). The Finished Status indicates in your org that the generated installments are ready for collection using your payslip process.</inlineHelpText>
+    <label>Finished Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-- Provided by Sys Admin --</fullName>
+                <default>false</default>
+                <label>-- Provided by Sys Admin --</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

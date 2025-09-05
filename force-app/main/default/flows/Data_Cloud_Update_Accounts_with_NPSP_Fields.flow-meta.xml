@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Extract fields from JSON payload of the data action</description>
+        <name>apxc_Unified_Account</name>
+        <label>Extract Unified Account</label>
+        <locationX>887</locationX>
+        <locationY>558</locationY>
+        <actionName>ExtractJSONValues</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Check_If_NPC_Account_Matched_to_NPSP_Account</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>inputJSONString</name>
+            <value>
+                <elementReference>text_CurrentPayloadValue</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>keysToExtract</name>
+            <value>
+                <stringValue>[{&quot;key&quot;:&quot;value1&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_NPC_Account_Id__c&quot;,&quot;order&quot;:0},{&quot;key&quot;:&quot;value2&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_Supplier_Status__c&quot;,&quot;order&quot;:1},{&quot;key&quot;:&quot;value3&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_Supplier_Tier__c&quot;,&quot;order&quot;:2},{&quot;key&quot;:&quot;value4&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_Top_90__c&quot;,&quot;order&quot;:3},{&quot;key&quot;:&quot;value5&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_Fareshare_Account_Manager__c&quot;,&quot;order&quot;:4},{&quot;key&quot;:&quot;value6&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_NPSP_Account_Id__c&quot;,&quot;order&quot;:5},{&quot;key&quot;:&quot;value7&quot;,&quot;value&quot;:&quot;UnifiedssotAccount1__dlm_Ultimate_Parent__c&quot;,&quot;order&quot;:6}]</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>ExtractJSONValues</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Assign Data action JSON payload to a flow variable</description>
+        <name>assignment_JSON_Payload</name>
+        <label>JSON Payload</label>
+        <locationX>889</locationX>
+        <locationY>400</locationY>
+        <assignmentItems>
+            <assignToReference>text_CurrentPayloadValue</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.PayloadCurrentValue</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>apxc_Unified_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Top_90</name>
+        <label>Set Top 90</label>
+        <locationX>893</locationX>
+        <locationY>951</locationY>
+        <assignmentItems>
+            <assignToReference>var_Top90</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Formula_Top90</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>ur_Update_CorporateAccounts</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Both NPC and NPSP Salesforce Ids are present on the Unified Account record coming from Data Cloud
+value1 = NPC Account Salesforce Id
+value6 = NPSP Account Salesforce Id</description>
+        <name>Check_If_NPC_Account_Matched_to_NPSP_Account</name>
+        <label>Check If NPC Account Matched to NPSP Account</label>
+        <locationX>882</locationX>
+        <locationY>719</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>NPC_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>apxc_Unified_Account.value1</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Account.value6</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Account.value1</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>apxc_Unified_Account.value6</leftValueReference>
+                <operator>NotEqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Set_Top_90</targetReference>
+            </connector>
+            <label>NPC Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if data action from data cloud is UnifiedAccount</description>
+        <name>Unified_Account_Data_Action_Check</name>
+        <label>Unified Account Data Action Check</label>
+        <locationX>881</locationX>
+        <locationY>194</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Unified_Account_Data_Action</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ActionDeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>UnifiedAccount</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assignment_JSON_Payload</targetReference>
+            </connector>
+            <label>Is Unified Account Data Action</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>formula_EmailAddress</name>
+        <dataType>String</dataType>
+        <expression>IF(
+AND({!formula_EmailAddressRegex}=TRUE, LEN({!apxc_Unified_Account.value12})&lt;=80), 
+{!apxc_Unified_Account.value12}, 
+&quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_EmailAddressRegex</name>
+        <dataType>Boolean</dataType>
+        <expression>REGEX({!apxc_Unified_Account.value5}, &quot;^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IndividualCity</name>
+        <dataType>String</dataType>
+        <expression>IF(
+LEN({!apxc_Unified_Account.value9})&lt;=40, {!apxc_Unified_Account.value9}, &quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_IndividualLastName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR({!apxc_Unified_Account.value2}=&quot;&quot;,ISNULL({!apxc_Unified_Account.value2})),
+&quot;FareShare Supporter&quot;,
+{!apxc_Unified_Account.value2}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PhoneCouldNotMigrate</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!formula_PhoneNumber}=&apos;&apos;, {!apxc_Unified_Account.value12}, &apos;&apos;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>formula_PhoneNumber</name>
+        <dataType>String</dataType>
+        <expression>IF(
+OR(LEN({!apxc_Unified_Account.value12})=9,LEN({!apxc_Unified_Account.value12})=11,LEN({!apxc_Unified_Account.value12})=12), {!apxc_Unified_Account.value12}, &apos;&apos;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Formula_Top90</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!apxc_Unified_Account.value4}=&quot;true&quot;, true, false)</expression>
+    </formulas>
+    <interviewLabel>Data Cloud - Update Accounts with NPSP Fields {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Data Cloud - Update NPC Food Partner Accounts with NPSP Fields</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>ur_Update_CorporateAccounts</name>
+        <label>Update Corporate Accounts</label>
+        <locationX>894</locationX>
+        <locationY>1138</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>apxc_Unified_Account.value1</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Account_Manager__c</field>
+            <value>
+                <elementReference>apxc_Unified_Account.value5</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>NPSP_Salesforce_Id__c</field>
+            <value>
+                <elementReference>apxc_Unified_Account.value6</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Supplier_Status__c</field>
+            <value>
+                <elementReference>apxc_Unified_Account.value2</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Supplier_Tier__c</field>
+            <value>
+                <elementReference>apxc_Unified_Account.value3</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Top_90__c</field>
+            <value>
+                <elementReference>var_Top90</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Ultimate_Parent__c</field>
+            <value>
+                <elementReference>apxc_Unified_Account.value7</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>762</locationX>
+        <locationY>17</locationY>
+        <connector>
+            <targetReference>Unified_Account_Data_Action_Check</targetReference>
+        </connector>
+        <flowRunAsUser>TriggeringUser</flowRunAsUser>
+        <object>DataObjectDataChgEvent</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <variables>
+        <name>text_CurrentPayloadValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_Top90</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <elementReference>Formula_Top90</elementReference>
+        </value>
+    </variables>
+</Flow>

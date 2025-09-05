@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Monthly_Collection_Strategy_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>if (AND (RecordType.DeveloperName == &apos;Monthly&apos;,ISBLANK(TEXT( cpm__Monthly_Collection_Day_Strategy__c ))),true,false)</errorConditionFormula>
+    <errorDisplayField>cpm__Monthly_Collection_Day_Strategy__c</errorDisplayField>
+    <errorMessage>Monthly Collection Day Strategy is required</errorMessage>
+</ValidationRule>

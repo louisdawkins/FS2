@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Share_with_FinDock_Integration_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share with FinDock Integration User</label>
+        <sharedTo>
+            <group>FinDock_Integration_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <allInternalUsers></allInternalUsers>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

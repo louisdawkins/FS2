@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cpm__Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The status of this Installment.</description>
+    <inlineHelpText>The status of this Installment.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Collected</fullName>
+                <default>false</default>
+                <label>Collected</label>
+            </value>
+            <value>
+                <fullName>Reversed</fullName>
+                <default>false</default>
+                <label>Reversed</label>
+            </value>
+            <value>
+                <fullName>Outstanding</fullName>
+                <default>true</default>
+                <label>Outstanding</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Refunded</fullName>
+                <default>false</default>
+                <label>Refunded</label>
+            </value>
+            <value>
+                <fullName>Pending recollection</fullName>
+                <default>false</default>
+                <label>Pending recollection</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Partially paid</fullName>
+                <default>false</default>
+                <label>Partially paid</label>
+            </value>
+            <value>
+                <fullName>Pending Processing</fullName>
+                <default>false</default>
+                <label>Pending Processing</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Paid</fullName>
+                <default>false</default>
+                <label>Paid</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

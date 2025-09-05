@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Contact_has_Active_GAD__c</fullName>
+    <deprecated>false</deprecated>
+    <formula>IF ( 
+AND ( NOT(ISNULL(cpm__Contact__c)), cpm__Contact__r.gaid__Active_Gift_Aid_Declarations__c &gt; 0 ), true, false 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Not used.</inlineHelpText>
+    <label>Contact has Active GAD (deprecated)</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

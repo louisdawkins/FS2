@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access to:
+- All fields on Payment Profile (FinDock object) and BBAN record type
+- All fields on Mandate (FinDock object)</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Payment Profile and Mandate fields and record type access</label>
+</PermissionSet>

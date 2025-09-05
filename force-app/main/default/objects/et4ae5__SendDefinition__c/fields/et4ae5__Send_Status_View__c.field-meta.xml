@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>et4ae5__Send_Status_View__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( et4ae5__SendStatus__c , &quot;Scheduled&quot;) &amp;&amp; et4ae5__Scheduled_Date_Time__c &lt;= NOW() , $Label.et4ae5__queuedFP , IF( ISPICKVAL(et4ae5__SendStatus__c , &quot;Pending Tracking Subscription&quot; ) , $Label.et4ae5__completed , TEXT( et4ae5__SendStatus__c ) ) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This status can differ from the email status in Marketing Cloud.</inlineHelpText>
+    <label>Send Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

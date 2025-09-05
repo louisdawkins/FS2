@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gaid__Total_Claim_Record_Amount__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Total claim record amount of the file.</description>
+    <inlineHelpText>Total claim record amount of the file.</inlineHelpText>
+    <label>Total Claim Record Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
