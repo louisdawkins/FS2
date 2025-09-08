@@ -3,7 +3,7 @@
     <apiVersion>62.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
-        <name>Assign_Donation_Date1</name>
+        <name>Assign_Donation_Date</name>
         <label>Assign Donation Date</label>
         <locationX>176</locationX>
         <locationY>323</locationY>
